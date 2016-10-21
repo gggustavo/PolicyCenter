@@ -2,6 +2,7 @@
 {
     public class Productor
     {
+        //pepe//
         public int IdProductor { get; set; }
         public string Nombre { get; set; }
 
