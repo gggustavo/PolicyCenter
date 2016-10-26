@@ -15,6 +15,7 @@ namespace View
         public Form1()
         {
             InitializeComponent();
+            Controller.Test.Initialize();
         }
     }
 }
