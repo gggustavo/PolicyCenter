@@ -8,6 +8,16 @@ namespace Model.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Localidad",
+                c => new
+                    {
+                        IdLocalidad = c.Int(nullable: false, identity: true),
+                        Nombre = c.String(),
+                        CodPostal = c.String(),
+                    })
+                .PrimaryKey(t => t.IdLocalidad);
+            
+            CreateTable(
                 "dbo.Marca",
                 c => new
                     {
@@ -34,36 +44,30 @@ namespace Model.Migrations
                     {
                         IdVersion = c.Int(nullable: false, identity: true),
                         Nombre = c.String(),
-                        IdModelo = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.IdVersion)
-                .ForeignKey("dbo.Modelo", t => t.IdModelo)
-                .Index(t => t.IdModelo);
+                .PrimaryKey(t => t.IdVersion);
             
             CreateTable(
-                "dbo.Localidad",
+                "dbo.Organizador",
                 c => new
                     {
-                        IdLocalidad = c.Int(nullable: false, identity: true),
+                        IdOrganizador = c.Int(nullable: false, identity: true),
                         Nombre = c.String(),
-                        CodPostal = c.String(),
+                        IdProductor = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.IdLocalidad);
+                .PrimaryKey(t => t.IdOrganizador);
             
             CreateTable(
-                "dbo.Vehiculo",
+                "dbo.Productor",
                 c => new
                     {
-                        IdVehiculo = c.Int(nullable: false, identity: true),
-                        IdMarca = c.Int(nullable: false),
-                        Anio = c.String(),
-                        Patente = c.String(),
-                        Color = c.String(),
-                        Precio = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        IdProductor = c.Int(nullable: false, identity: true),
+                        Nombre = c.String(),
+                        IdOrganizador = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.IdVehiculo)
-                .ForeignKey("dbo.Marca", t => t.IdMarca)
-                .Index(t => t.IdMarca);
+                .PrimaryKey(t => t.IdProductor)
+                .ForeignKey("dbo.Organizador", t => t.IdOrganizador)
+                .Index(t => t.IdOrganizador);
             
             CreateTable(
                 "dbo.Persona",
@@ -99,27 +103,62 @@ namespace Model.Migrations
                     })
                 .PrimaryKey(t => t.IdDireccion);
             
+            CreateTable(
+                "dbo.Vehiculo",
+                c => new
+                    {
+                        IdVehiculo = c.Int(nullable: false, identity: true),
+                        IdMarca = c.Int(nullable: false),
+                        Anio = c.String(),
+                        Patente = c.String(),
+                        Color = c.String(),
+                        Precio = c.Decimal(nullable: false, precision: 18, scale: 2),
+                    })
+                .PrimaryKey(t => t.IdVehiculo)
+                .ForeignKey("dbo.Marca", t => t.IdMarca)
+                .Index(t => t.IdMarca);
+            
+            CreateTable(
+                "dbo.VersionModelo",
+                c => new
+                    {
+                        Version_IdVersion = c.Int(nullable: false),
+                        Modelo_IdModelo = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.Version_IdVersion, t.Modelo_IdModelo })
+                .ForeignKey("dbo.Version", t => t.Version_IdVersion, cascadeDelete: true)
+                .ForeignKey("dbo.Modelo", t => t.Modelo_IdModelo, cascadeDelete: true)
+                .Index(t => t.Version_IdVersion)
+                .Index(t => t.Modelo_IdModelo);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.Vehiculo", "IdMarca", "dbo.Marca");
             DropForeignKey("dbo.Persona", "IdLocalidad", "dbo.Localidad");
             DropForeignKey("dbo.Persona", "IdDireccion", "dbo.Direccion");
-            DropForeignKey("dbo.Vehiculo", "IdMarca", "dbo.Marca");
-            DropForeignKey("dbo.Version", "IdModelo", "dbo.Modelo");
+            DropForeignKey("dbo.Productor", "IdOrganizador", "dbo.Organizador");
+            DropForeignKey("dbo.VersionModelo", "Modelo_IdModelo", "dbo.Modelo");
+            DropForeignKey("dbo.VersionModelo", "Version_IdVersion", "dbo.Version");
             DropForeignKey("dbo.Modelo", "IdMarca", "dbo.Marca");
+            DropIndex("dbo.VersionModelo", new[] { "Modelo_IdModelo" });
+            DropIndex("dbo.VersionModelo", new[] { "Version_IdVersion" });
+            DropIndex("dbo.Vehiculo", new[] { "IdMarca" });
             DropIndex("dbo.Persona", new[] { "IdLocalidad" });
             DropIndex("dbo.Persona", new[] { "IdDireccion" });
-            DropIndex("dbo.Vehiculo", new[] { "IdMarca" });
-            DropIndex("dbo.Version", new[] { "IdModelo" });
+            DropIndex("dbo.Productor", new[] { "IdOrganizador" });
             DropIndex("dbo.Modelo", new[] { "IdMarca" });
+            DropTable("dbo.VersionModelo");
+            DropTable("dbo.Vehiculo");
             DropTable("dbo.Direccion");
             DropTable("dbo.Persona");
-            DropTable("dbo.Vehiculo");
-            DropTable("dbo.Localidad");
+            DropTable("dbo.Productor");
+            DropTable("dbo.Organizador");
             DropTable("dbo.Version");
             DropTable("dbo.Modelo");
             DropTable("dbo.Marca");
+            DropTable("dbo.Localidad");
         }
     }
 }

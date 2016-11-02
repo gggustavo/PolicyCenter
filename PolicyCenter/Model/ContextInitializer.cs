@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 
 namespace Model
 {
@@ -17,56 +18,74 @@ namespace Model
         {
             var modelos = new List<Modelo>();
 
-            var versiones = new List<Version>();
+            var versions = new List<Version>();
 
-            versiones.Add(new Version { Nombre = "Starline 4X2 MY16" });
-            versiones.Add(new Version { Nombre = "Starline 4X4 MY16" });
+            versions.Add(new Version { Nombre = "Starline 4X2 MY16" });
+            versions.Add(new Version { Nombre = "Starline 4X4 MY16" });
 
             var modelo = new Modelo
             {
                 Nombre = "Amarok DC 2.0L TDI 140 CV",
                 IdMarca = 10,
-                Versions = versiones
+                Versions = versions
             };
 
             modelos.Add(modelo);
 
-            versiones = new List<Version>();
-            versiones.Add(new Version { Nombre = "Black Package 4X4 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Black Package 4X4 MY16" });
-            versiones.Add(new Version { Nombre = "Dark Label 4x2 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Dark Label 4x2 MY16" });
-            versiones.Add(new Version { Nombre = "Dark Label 4x4 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Dark Label 4x4 MY16" });
-            versiones.Add(new Version { Nombre = "Highline Pack 4x2 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Highline Pack 4x2 MY16" });
-            versiones.Add(new Version { Nombre = "Highline Pack 4x4 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Highline Pack 4x4 MY16" });
-            versiones.Add(new Version { Nombre = "Trendline Pack 4x2 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Trendline Pack 4x2 MY16" });
-            versiones.Add(new Version { Nombre = "Trendline Pack 4x4 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Trendline Pack 4x4 MY16" });
-            versiones.Add(new Version { Nombre = "Ultimate 4x2 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Ultimate 4x2 MY16" });
-            versiones.Add(new Version { Nombre = "Ultimate 4x4 AUT MY16" });
-            versiones.Add(new Version { Nombre = "Ultimate 4x4 MY16" });
+            versions = new List<Version>();
+            versions.Add(new Version { Nombre = "Black Package 4X4 AUT MY16" });
+            versions.Add(new Version { Nombre = "Black Package 4X4 MY16" });
+            versions.Add(new Version { Nombre = "Dark Label 4x2 AUT MY16" });
+            versions.Add(new Version { Nombre = "Dark Label 4x2 MY16" });
+            versions.Add(new Version { Nombre = "Dark Label 4x4 AUT MY16" });
+            versions.Add(new Version { Nombre = "Dark Label 4x4 MY16" });
+            versions.Add(new Version { Nombre = "Highline Pack 4x2 AUT MY16" });
+            versions.Add(new Version { Nombre = "Highline Pack 4x2 MY16" });
+            versions.Add(new Version { Nombre = "Highline Pack 4x4 AUT MY16" });
+            versions.Add(new Version { Nombre = "Highline Pack 4x4 MY16" });
+            versions.Add(new Version { Nombre = "Trendline Pack 4x2 AUT MY16" });
+            versions.Add(new Version { Nombre = "Trendline Pack 4x2 MY16" });
+            versions.Add(new Version { Nombre = "Trendline Pack 4x4 AUT MY16" });
+            versions.Add(new Version { Nombre = "Trendline Pack 4x4 MY16" });
+            versions.Add(new Version { Nombre = "Ultimate 4x2 AUT MY16" });
+            versions.Add(new Version { Nombre = "Ultimate 4x2 MY16" });
+            versions.Add(new Version { Nombre = "Ultimate 4x4 AUT MY16" });
+            versions.Add(new Version { Nombre = "Ultimate 4x4 MY16" });
 
             modelo = new Modelo
             {
                 Nombre = "Amarok DC 2.0L TDI 180 CV",
                 IdMarca = 10,
-                Versions = versiones
+                Versions = versions
             };
 
-            modelos.Add(modelo);            
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos.Clear();
+            versions.Clear();
+            
+            versions.Add(context.Version.Where(_ => _.IdVersion == 1).SingleOrDefault());
+            versions.Add(context.Version.Where(_ => _.IdVersion == 2).SingleOrDefault());
 
             modelo = new Modelo
             {
                 Nombre = "Amarok SC 2.0L TDI 140 CV",
-                IdMarca = 10                
+                IdMarca = 10,
+                Versions = versions
             };
 
             modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos.Clear();
+            versions.Clear();
+            
+            //TODO Version add.
 
             modelo = new Modelo
             {
@@ -301,8 +320,7 @@ namespace Model
 
             modelos.Add(modelo);
 
-            context.Modelo.AddRange(modelos);
-            context.SaveChanges();
+            
         }
 
         private static void CargarMarcas(PolicyCenterContext context)

@@ -19,13 +19,13 @@ namespace Model
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
             modelBuilder.Entity<Marca>().HasKey(_ => _.IdMarca);
+
             modelBuilder.Entity<Modelo>()
-                .HasKey(_ => _.IdModelo)
-                .HasRequired(_ => _.Versions);
+                .HasKey(_ => _.IdModelo);
+
             modelBuilder.Entity<Version>()
                 .HasKey(_ => _.IdVersion)
-                .HasRequired(_ => _.Modelo).WithMany(_ => _.Versions)
-                .HasForeignKey(_ => _.IdModelo);
+                .HasMany(_ => _.Models).WithMany(_ => _.Versions);                
 
             modelBuilder.Entity<Localidad>().HasKey(_ => _.IdLocalidad);
             modelBuilder.Entity<Vehiculo>().HasKey(_ => _.IdVehiculo);

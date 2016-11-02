@@ -56,13 +56,9 @@
     <Compile Include="Direccion.cs" />
     <Compile Include="Localidad.cs" />
     <Compile Include="Marca.cs" />
-    <Compile Include="Migrations\201610170419542_initial.cs" />
-    <Compile Include="Migrations\201610170419542_initial.Designer.cs">
-      <DependentUpon>201610170419542_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610180233337_AddOrganizationProductor.cs" />
-    <Compile Include="Migrations\201610180233337_AddOrganizationProductor.Designer.cs">
-      <DependentUpon>201610180233337_AddOrganizationProductor.cs</DependentUpon>
+    <Compile Include="Migrations\201611020114120_initial.cs" />
+    <Compile Include="Migrations\201611020114120_initial.Designer.cs">
+      <DependentUpon>201611020114120_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo.cs" />
@@ -79,11 +75,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610170419542_initial.resx">
-      <DependentUpon>201610170419542_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610180233337_AddOrganizationProductor.resx">
-      <DependentUpon>201610180233337_AddOrganizationProductor.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611020114120_initial.resx">
+      <DependentUpon>201611020114120_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
