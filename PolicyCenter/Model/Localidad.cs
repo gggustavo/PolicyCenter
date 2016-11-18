@@ -4,6 +4,6 @@
     {
         public int IdLocalidad { get; set; }
         public string Nombre { get; set; }
-        public string CodPostal { get; set; }
+        public int CodPostal { get; set; }
     }
 }
