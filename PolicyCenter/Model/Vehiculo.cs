@@ -13,5 +13,6 @@
         public string Patente { get; set; }
         public string Color { get; set; }
         public decimal Precio { get; set; }
+        public decimal Valor0Km { get; set; }
     }
 }

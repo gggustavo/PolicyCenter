@@ -38,6 +38,18 @@ namespace Model
 
             modelBuilder.Entity<Productor>().HasKey(_ => _.IdProductor);
             modelBuilder.Entity<Organizador>().HasKey(_ => _.IdOrganizador).HasMany(_ => _.Productores);
+
+            modelBuilder.Entity<Cobertura>().HasKey(_ => _.IdCobertura);
+            modelBuilder.Entity<Riesgo>().HasKey(_ => _.IdRiesgo);
+
+            modelBuilder.Entity<Cobertura>()
+                .HasMany(_ => _.Riesgos)
+                .WithMany(_ => _.Coberturas);
+         
+            modelBuilder.Entity<Poliza>().HasKey(_ => _.IdPoliza);
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Persona);
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Vehiculo);
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Cobertura);
         }
 
         public DbSet<Marca> Marca { get; set; }
@@ -48,6 +60,9 @@ namespace Model
         public DbSet<Persona> Persona { get; set; }
         public DbSet<Productor> Productor { get; set; }
         public DbSet<Organizador> Organizador { get; set; }
+        public DbSet<Poliza> Poliza { get; set; }
+        public DbSet<Riesgo> Riesgo { get; set; }
+        public DbSet<Cobertura> Cobertura { get; set; }
 
 
     }

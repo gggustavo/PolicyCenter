@@ -13,6 +13,8 @@ namespace Model
             CargarLocalidades(context);
             CargarPersona(context);
             CargarOrganizadorProductor(context);
+            CargarRiesgos(context);
+            CargarCoberturas(context);
 
             base.Seed(context);
         }
@@ -773,6 +775,146 @@ namespace Model
             context.Organizador.Add(organizador);
             context.SaveChanges();
 
+        }
+
+        private static void CargarRiesgos(PolicyCenterContext context)
+        {
+            var riesgos = new List<Riesgo>();
+            var riesgo = new Riesgo
+            {
+                Nombre = "Responsabilidad ​civil"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Pérdida total por robo y/o hurto sin franquicia"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Seguro de Accidentes Personales, en caso de fallecimiento, por cada ocupante del vehículo"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Pérdida total por incendio sin franquicia"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Destrucción total por accidente"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Pérdida parcial por robo y/o hurto e incendio sin franquicia"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Rotura de cristales laterales del vehículo"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Rotura de luneta y parabrisas del vehículo por cualquier causa sin franquicia"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Rotura de cristales de techo del vehículo"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Daños parciales con franquicia"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Pérdida y/o Daños parciales como consecuencia de un robo/hurto total"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Rotura de cerraduras"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Daños parciales como consecuencia de granizo"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Daños parciales como consecuencia de inundación"
+            };
+            riesgos.Add(riesgo);
+
+            riesgo = new Riesgo
+            {
+                Nombre = "Asistencia en viaje las 24 horas al vehículo"
+            };
+            riesgos.Add(riesgo);
+
+            context.Riesgo.AddRange(riesgos);
+            context.SaveChanges();
+        }
+
+        private static void CargarCoberturas(PolicyCenterContext context)
+        {
+            var cobertura = new Cobertura
+            {
+                Nombre = "A",
+                Riesgos = context.Riesgo.Where(_ => _.IdRiesgo == 1).ToList()
+            };
+
+            context.Cobertura.Add(cobertura);
+
+            cobertura = new Cobertura
+            {
+                Nombre = "B",
+                Riesgos = context.Riesgo.Where(_ => _.IdRiesgo == 1 && _.IdRiesgo == 2).ToList()
+            };
+            context.Cobertura.Add(cobertura);
+
+            cobertura = new Cobertura
+            {
+                Nombre = "C",
+                Riesgos = context.Riesgo.Where(_ => _.IdRiesgo <= 4).ToList()
+            };
+            context.Cobertura.Add(cobertura);
+
+            cobertura = new Cobertura
+            {
+                Nombre = "C+",
+                Riesgos = context.Riesgo.Where(_ => _.IdRiesgo <= 8).ToList()
+            };
+
+            context.Cobertura.Add(cobertura);
+
+            cobertura = new Cobertura
+            {
+                Nombre = "D",
+                Riesgos = context.Riesgo.Where(_ => _.IdRiesgo <= 15).ToList()
+            };
+
+            context.Cobertura.Add(cobertura);
+
+            context.SaveChanges();
         }
 
     }
