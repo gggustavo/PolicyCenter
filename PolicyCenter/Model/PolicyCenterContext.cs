@@ -25,19 +25,28 @@ namespace Model
 
             modelBuilder.Entity<Version>()
                 .HasKey(_ => _.IdVersion)
-                .HasMany(_ => _.Models).WithMany(_ => _.Versions);                
+                .HasMany(_ => _.Models)
+                .WithMany(_ => _.Versions);                
 
             modelBuilder.Entity<Localidad>().HasKey(_ => _.IdLocalidad);
             modelBuilder.Entity<Vehiculo>().HasKey(_ => _.IdVehiculo);
+
+            modelBuilder.Entity<Vehiculo>().HasRequired(_ => _.Marca);
+            modelBuilder.Entity<Vehiculo>().HasRequired(_ => _.Modelo);
+            modelBuilder.Entity<Vehiculo>().HasRequired(_ => _.Version);
           
-            modelBuilder.Entity<Persona>().HasKey(_ => _.IdPersona)
+            modelBuilder.Entity<Persona>()
+                .HasKey(_ => _.IdPersona)
                 .HasRequired(_ => _.Localidad);
 
             modelBuilder.Entity<Persona>().HasRequired(_ => _.Direccion);
             modelBuilder.Entity<Direccion>().HasKey(_ => _.IdDireccion);
 
             modelBuilder.Entity<Productor>().HasKey(_ => _.IdProductor);
-            modelBuilder.Entity<Organizador>().HasKey(_ => _.IdOrganizador).HasMany(_ => _.Productores);
+
+            modelBuilder.Entity<Organizador>()
+                .HasKey(_ => _.IdOrganizador)
+                .HasRequired(_ => _.Productores);
 
             modelBuilder.Entity<Cobertura>().HasKey(_ => _.IdCobertura);
             modelBuilder.Entity<Riesgo>().HasKey(_ => _.IdRiesgo);
@@ -48,8 +57,15 @@ namespace Model
          
             modelBuilder.Entity<Poliza>().HasKey(_ => _.IdPoliza);
             modelBuilder.Entity<Poliza>().HasRequired(_ => _.Persona);
-            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Vehiculo);
-            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Cobertura);
+            
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Productor);
+            
+            modelBuilder.Entity<PolizaDetalle>()
+                .HasKey(_ => _.IdPolizaDetalle)
+                .HasRequired(_ => _.Poliza);
+
+            modelBuilder.Entity<PolizaDetalle>().HasRequired(_ => _.Vehiculo);
+            modelBuilder.Entity<PolizaDetalle>().HasRequired(_ => _.Cobertura);
         }
 
         public DbSet<Marca> Marca { get; set; }
@@ -63,6 +79,7 @@ namespace Model
         public DbSet<Poliza> Poliza { get; set; }
         public DbSet<Riesgo> Riesgo { get; set; }
         public DbSet<Cobertura> Cobertura { get; set; }
+        public DbSet<PolizaDetalle> PolizaDetalle { get; set; }
 
 
     }

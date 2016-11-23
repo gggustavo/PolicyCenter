@@ -15,6 +15,8 @@ namespace Model
             CargarOrganizadorProductor(context);
             CargarRiesgos(context);
             CargarCoberturas(context);
+            CargarVehiculos(context);
+            CargarPoliza(context);
 
             base.Seed(context);
         }
@@ -760,7 +762,8 @@ namespace Model
         {
             var productor = new Productor
             {
-                Nombre = "Juan Valdez"
+                Nombre = "Juan Valdez",
+                Matricula = 654157
             };
 
             context.Productor.Add(productor);
@@ -915,6 +918,127 @@ namespace Model
             context.Cobertura.Add(cobertura);
 
             context.SaveChanges();
+        }
+
+        private static void CargarVehiculos(PolicyCenterContext context)
+        {
+            var vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 37).FirstOrDefault().IdVersion, // Trendline manual 5P MY17
+                IdModelo = 8, // GOL TREND
+                Precio = 220836.89M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 36).FirstOrDefault().IdVersion, // Trendline manual 3P MY17
+                IdModelo = 8, // GOL TREND
+                Precio = 208330.83M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 35).FirstOrDefault().IdVersion, // Sportline manual 5P MY17
+                IdModelo = 8, // GOL TREND
+                Precio = 249080.5M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 34).FirstOrDefault().IdVersion, // Serie manual 5P MY17
+                IdModelo = 8, // GOL TREND
+                Precio = 205309.03M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 33).FirstOrDefault().IdVersion, // Serie manual 3P MY17
+                IdModelo = 8, // GOL TREND
+                Precio = 192802.9M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 32).FirstOrDefault().IdVersion, //Highline manual 5P MY17
+                IdModelo = 8, // GOL TREND
+                Precio = 284514.6M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 31).FirstOrDefault().IdVersion, //Highline I-Motion MY17
+                IdModelo = 8, // GOL TREND                 
+                Precio = 302127.25M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 30).FirstOrDefault().IdVersion, //Connect manual 5P MY17
+                IdModelo = 8, // GOL TREND
+                Precio = 252207.1M,
+                Anio = "2017"
+            };
+            context.Vehiculo.Add(vehiculo);
+
+            context.SaveChanges();
+        }
+
+        private static void CargarPoliza(PolicyCenterContext context)
+        {
+            var persona = context.Persona.FirstOrDefault();
+            var cobertura = context.Cobertura.FirstOrDefault();
+            var vehiculo = context.Vehiculo.FirstOrDefault();
+
+            var poliza = new Poliza
+            {                
+                IdPersona = persona.IdPersona,
+                IdProductor = 1,
+                Numero = 1,
+
+            };
+
+            context.Poliza.Add(poliza);
+            context.SaveChanges();
+
+
+            var polizaDetalle = new PolizaDetalle
+            {
+                IdPoliza = 1,
+                Premio = 8692,
+                Prima = 6460,
+                IdVehiculo = vehiculo.IdVehiculo,
+                VigenciaDesde = System.DateTime.Now,
+                VigenciaHasta = System.DateTime.Now.AddDays(180),
+                IdCobertura = cobertura.IdCobertura,
+                Estado = "Vigente"
+            };
+
+            context.PolizaDetalle.Add(polizaDetalle);
+            context.SaveChanges();
+
+ 
         }
 
     }

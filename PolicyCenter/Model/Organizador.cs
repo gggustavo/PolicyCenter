@@ -8,6 +8,6 @@ namespace Model
         public string Nombre { get; set; }
 
         public int IdProductor { get; set; }
-        public ICollection<Productor> Productores { get; set; }
+        public Productor Productores { get; set; }
     }
 }
