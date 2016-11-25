@@ -1,8 +1,7 @@
 ﻿namespace Model
 {
-    public class Vehiculo
+    public class Vehiculo : Bien
     {
-        public int IdVehiculo { get; set; }
         public int IdMarca { get; set; }
         public Marca Marca { get; set; }
 
@@ -13,6 +12,6 @@
         public Version Version { get; set; }
 
         public string Anio { get; set; }        
-        public decimal Precio { get; set; }        
+             
     }
 }

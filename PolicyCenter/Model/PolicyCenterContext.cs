@@ -29,7 +29,6 @@ namespace Model
                 .WithMany(_ => _.Versions);                
 
             modelBuilder.Entity<Localidad>().HasKey(_ => _.IdLocalidad);
-            modelBuilder.Entity<Vehiculo>().HasKey(_ => _.IdVehiculo);
 
             modelBuilder.Entity<Vehiculo>().HasRequired(_ => _.Marca);
             modelBuilder.Entity<Vehiculo>().HasRequired(_ => _.Modelo);
@@ -56,30 +55,36 @@ namespace Model
                 .WithMany(_ => _.Coberturas);
          
             modelBuilder.Entity<Poliza>().HasKey(_ => _.IdPoliza);
-            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Persona);
-            
-            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Productor);
-            
-            modelBuilder.Entity<PolizaDetalle>()
-                .HasKey(_ => _.IdPolizaDetalle)
-                .HasRequired(_ => _.Poliza);
 
-            modelBuilder.Entity<PolizaDetalle>().HasRequired(_ => _.Vehiculo);
-            modelBuilder.Entity<PolizaDetalle>().HasRequired(_ => _.Cobertura);
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Persona);          
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Productor);
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Bien);
+            modelBuilder.Entity<Poliza>().HasRequired(_ => _.Cobertura);
+
+            modelBuilder.Entity<Bien>().HasKey(_ => _.IdBien);
+            modelBuilder.Entity<Bien>().HasRequired(_ => _.Ramo);
+            
+
+            modelBuilder.Entity<Ramo>().HasKey(_ => _.IdRamo);
+
+            
+            modelBuilder.Entity<Vehiculo>().HasKey(_ => _.IdBien);
+            modelBuilder.Entity<Vehiculo>().ToTable("BienVehiculo");
         }
 
         public DbSet<Marca> Marca { get; set; }
         public DbSet<Modelo> Modelo { get; set; }
         public DbSet<Version> Version { get; set; }
         public DbSet<Localidad> Localidad { get; set; }
-        public DbSet<Vehiculo> Vehiculo { get; set; }
+        public DbSet<Bien> Bien { get; set; }
         public DbSet<Persona> Persona { get; set; }
         public DbSet<Productor> Productor { get; set; }
         public DbSet<Organizador> Organizador { get; set; }
         public DbSet<Poliza> Poliza { get; set; }
+        public DbSet<Ramo> Ramo { get; set; }
         public DbSet<Riesgo> Riesgo { get; set; }
         public DbSet<Cobertura> Cobertura { get; set; }
-        public DbSet<PolizaDetalle> PolizaDetalle { get; set; }
+        
 
 
     }
