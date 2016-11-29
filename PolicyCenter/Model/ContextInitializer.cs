@@ -19,7 +19,7 @@ namespace Model
             CargarVehiculos(context);
             
 
-            CargarPoliza(context);
+            //CargarPoliza(context);
             
 
             base.Seed(context);

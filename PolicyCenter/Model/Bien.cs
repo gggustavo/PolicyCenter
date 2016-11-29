@@ -2,10 +2,11 @@
 {
     public abstract class Bien
     {
-        public int IdBien { get; set; }
-        public decimal Precio { get; set; }
-
+        public int IdBien { get; set; }       
         public int IdRamo { get; set; }
         public Ramo Ramo { get; set; }
+
+
+        public decimal Precio { get; set; }
     }
 }

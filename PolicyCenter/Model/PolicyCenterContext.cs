@@ -64,9 +64,7 @@ namespace Model
             modelBuilder.Entity<Bien>().HasKey(_ => _.IdBien);
             modelBuilder.Entity<Bien>().HasRequired(_ => _.Ramo);
             
-
             modelBuilder.Entity<Ramo>().HasKey(_ => _.IdRamo);
-
             
             modelBuilder.Entity<Vehiculo>().HasKey(_ => _.IdBien);
             modelBuilder.Entity<Vehiculo>().ToTable("BienVehiculo");
