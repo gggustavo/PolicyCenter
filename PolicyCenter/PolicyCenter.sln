@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86191F
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rule", "Rule\Rule.csproj", "{1B80F351-290F-414D-AE14-8882F6653F75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPolicyCenter", "TestPolicyCenter\TestPolicyCenter.csproj", "{20DD8D21-C96A-4D03-B10C-90CBC501A661}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +38,14 @@ Global
 		{55C18A57-47D2-4E6E-94E9-3470FDD7B273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55C18A57-47D2-4E6E-94E9-3470FDD7B273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55C18A57-47D2-4E6E-94E9-3470FDD7B273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B80F351-290F-414D-AE14-8882F6653F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B80F351-290F-414D-AE14-8882F6653F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B80F351-290F-414D-AE14-8882F6653F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B80F351-290F-414D-AE14-8882F6653F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20DD8D21-C96A-4D03-B10C-90CBC501A661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20DD8D21-C96A-4D03-B10C-90CBC501A661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20DD8D21-C96A-4D03-B10C-90CBC501A661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20DD8D21-C96A-4D03-B10C-90CBC501A661}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

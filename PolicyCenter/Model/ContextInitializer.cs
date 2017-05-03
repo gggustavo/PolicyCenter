@@ -16,12 +16,8 @@ namespace Model
             CargarRiesgos(context);
             CargarCoberturas(context);
             CargarRamos(context);
-            CargarVehiculos(context);
-            
-
-            //CargarPoliza(context);
-            
-
+            CargarVehiculos(context);            
+            CargarPoliza(context);            
             base.Seed(context);
         }
 
@@ -1045,7 +1041,7 @@ namespace Model
                 IdCobertura = 1,
                 Numero = 1,
                 Premio = 8692,
-                Prima = 6460,
+                Prima = 6460, // calcular en base a formula
                 VigenciaDesde = System.DateTime.Now,
                 VigenciaHasta = System.DateTime.Now.AddDays(180),
                 Estado = "Vigente"
