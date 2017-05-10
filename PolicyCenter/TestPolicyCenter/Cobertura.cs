@@ -6,7 +6,7 @@ using Rule;
 namespace TestPolicyCenter
 {
     [TestClass]
-    public class Rule
+    public class Cobertura
     {
         [TestMethod]
         public void CalculateCoberturaA()
@@ -14,6 +14,7 @@ namespace TestPolicyCenter
             var poliza = new Poliza
             {
                 IdPersona = 1,
+                Persona = new Persona { Localidad = new Localidad { CodPostal = 2000, Nombre = "Rosario" } },
                 IdProductor = 1,
                 IdBien = 1,
                 Bien = new Vehiculo
@@ -28,11 +29,11 @@ namespace TestPolicyCenter
                 Estado = "Vigente"
             };
 
-            var rules = new RulePoliza(poliza);
-            poliza.Prima = rules.ObtenerPrima();
+            var rules = new ReglasPoliza(poliza);
+            poliza.Prima = rules.CalcularPrima();
             Console.WriteLine("Prima: " + poliza.Prima);
 
-            poliza.Premio = rules.ObtenerPremio();
+            poliza.Premio = rules.CalcularPremio(poliza.Prima);
             Console.WriteLine("Premio: " + poliza.Premio);
             Assert.IsTrue(poliza.Premio > 0);
 
@@ -46,6 +47,7 @@ namespace TestPolicyCenter
             var poliza = new Poliza
             {
                 IdPersona = 1,
+                Persona = new Persona { Localidad = new Localidad { CodPostal = 2000, Nombre = "Rosario"} },
                 IdProductor = 1,
                 IdBien = 1,
                 Bien = new Vehiculo
@@ -60,12 +62,12 @@ namespace TestPolicyCenter
                 Estado = "Vigente"
             };
 
-            var rules = new RulePoliza(poliza);
-            poliza.Prima = rules.ObtenerPrima();
+            var rules = new ReglasPoliza(poliza);
+            poliza.Prima = rules.CalcularPrima();
             Console.WriteLine("Prima: " + poliza.Prima);
             Assert.IsTrue(poliza.Prima > 0);
 
-            poliza.Premio = rules.ObtenerPremio();
+            poliza.Premio = rules.CalcularPremio(poliza.Prima);
             Console.WriteLine("Premio: " + poliza.Premio);
             Assert.IsTrue(poliza.Premio > 0);
         }
@@ -76,6 +78,7 @@ namespace TestPolicyCenter
             var poliza = new Poliza
             {
                 IdPersona = 1,
+                Persona = new Persona { Localidad = new Localidad { CodPostal = 2000, Nombre = "Rosario" } },
                 IdProductor = 1,
                 IdBien = 1,
                 Bien = new Vehiculo
@@ -90,12 +93,12 @@ namespace TestPolicyCenter
                 Estado = "Vigente"
             };
 
-            var rules = new RulePoliza(poliza);
-            poliza.Prima = rules.ObtenerPrima();
+            var rules = new ReglasPoliza(poliza);
+            poliza.Prima = rules.CalcularPrima();
             Console.WriteLine("Prima: " + poliza.Prima);
             Assert.IsTrue(poliza.Prima > 0);
 
-            poliza.Premio = rules.ObtenerPremio();
+            poliza.Premio = rules.CalcularPremio(poliza.Prima);
             Console.WriteLine("Premio: " + poliza.Premio);
             Assert.IsTrue(poliza.Premio > 0);
         }
@@ -106,6 +109,7 @@ namespace TestPolicyCenter
             var poliza = new Poliza
             {
                 IdPersona = 1,
+                Persona = new Persona { Localidad = new Localidad { CodPostal = 2000, Nombre = "Rosario" } },
                 IdProductor = 1,
                 IdBien = 1,
                 Bien = new Vehiculo
@@ -120,12 +124,12 @@ namespace TestPolicyCenter
                 Estado = "Vigente"
             };
 
-            var rules = new RulePoliza(poliza);
-            poliza.Prima = rules.ObtenerPrima();
+            var rules = new ReglasPoliza(poliza);
+            poliza.Prima = rules.CalcularPrima();
             Console.WriteLine("Prima: " + poliza.Prima);
             Assert.IsTrue(poliza.Prima > 0);
 
-            poliza.Premio = rules.ObtenerPremio();
+            poliza.Premio = rules.CalcularPremio(poliza.Prima);
             Console.WriteLine("Premio: " + poliza.Premio);
             Assert.IsTrue(poliza.Premio > 0);
         }
