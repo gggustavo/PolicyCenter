@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AntiguedadRiesgo.cs" />
     <Compile Include="Cobertura.cs" />
     <Compile Include="CoberturaD.cs" />
     <Compile Include="CoberturaCPlus.cs" />
@@ -53,6 +54,9 @@
       <Project>{55c18a57-47d2-4e6e-94e9-3470fdd7b273}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

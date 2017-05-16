@@ -17,7 +17,8 @@ namespace Rule
         public override decimal CalcularPrima()
         {
             var riesgo = new UbicacionRiesgo().RiesgoUbicacion(Poliza.Persona.Localidad.Nombre);
-             return Poliza.Bien.Precio * Convert.ToDecimal(0.005) + riesgo;
+            var antiguedadRiego = new AntiguedadRiesgo().RiegoAntiguedad(Poliza.Bien.Anio);
+            return Poliza.Bien.Precio * Convert.ToDecimal(0.005) + (Poliza.Bien.Precio * riesgo) + (Poliza.Bien.Precio * antiguedadRiego);
         }
         
     }

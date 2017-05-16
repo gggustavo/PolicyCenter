@@ -6,7 +6,7 @@ using Rule;
 namespace TestPolicyCenter
 {
     [TestClass]
-    public class Riesgo
+    public class UbicacionRiesgo
     {
 
         [TestMethod]
@@ -21,7 +21,7 @@ namespace TestPolicyCenter
                 Bien = new Vehiculo
                 {
                     Precio = 350000M,
-                    Anio = "2017"
+                    Anio = 2017
                 },
                 IdCobertura = 2,
                 Numero = 1,
@@ -52,7 +52,7 @@ namespace TestPolicyCenter
                 Bien = new Vehiculo
                 {
                     Precio = 350000M,
-                    Anio = "2017"
+                    Anio = 2017
                 },
                 IdCobertura = 2,
                 Numero = 1,

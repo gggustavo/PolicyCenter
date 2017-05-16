@@ -942,7 +942,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 37).FirstOrDefault().IdVersion, // Trendline manual 5P MY17
                 IdModelo = 8, // GOL TREND
                 Precio = 220836.89M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);
@@ -953,7 +953,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 36).FirstOrDefault().IdVersion, // Trendline manual 3P MY17
                 IdModelo = 8, // GOL TREND
                 Precio = 208330.83M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);
@@ -964,7 +964,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 35).FirstOrDefault().IdVersion, // Sportline manual 5P MY17
                 IdModelo = 8, // GOL TREND
                 Precio = 249080.5M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);
@@ -975,7 +975,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 34).FirstOrDefault().IdVersion, // Serie manual 5P MY17
                 IdModelo = 8, // GOL TREND
                 Precio = 205309.03M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);
@@ -986,7 +986,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 33).FirstOrDefault().IdVersion, // Serie manual 3P MY17
                 IdModelo = 8, // GOL TREND
                 Precio = 192802.9M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);
@@ -997,7 +997,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 32).FirstOrDefault().IdVersion, //Highline manual 5P MY17
                 IdModelo = 8, // GOL TREND
                 Precio = 284514.6M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);
@@ -1008,7 +1008,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 31).FirstOrDefault().IdVersion, //Highline I-Motion MY17
                 IdModelo = 8, // GOL TREND                 
                 Precio = 302127.25M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);
@@ -1019,7 +1019,7 @@ namespace Model
                 IdVersion = context.Version.Where(_ => _.IdVersion == 30).FirstOrDefault().IdVersion, //Connect manual 5P MY17
                 IdModelo = 8, // GOL TREND
                 Precio = 252207.1M,
-                Anio = "2017",
+                Anio = 2017,
                 IdRamo = 1
             };
             context.Bien.Add(vehiculo);

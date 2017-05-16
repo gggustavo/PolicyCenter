@@ -50,7 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Riego.cs" />
+    <Compile Include="AntiguedadRiego.cs" />
+    <Compile Include="UbicacionRiego.cs" />
     <Compile Include="Cobertura.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
