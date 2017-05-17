@@ -15,6 +15,15 @@ namespace Rule
         {            
             _calculo = new CalculoBase(poliza).Get();
             _reglas = new ReglasBase();
+
+
+            //factory!
+            //var factory = new CoberturaFactory();
+            //factory.RegisterCobertura<CoberturaA>(0);
+            //factory.RegisterCobertura<CoberturaC>(1);
+            //factory.RegisterCobertura<CoberturaCPlus>(2);
+            //factory.RegisterCobertura<CoberturaD>(3);
+            //var value = factory.Get(0);
         }
 
         public decimal CalcularPrima() 

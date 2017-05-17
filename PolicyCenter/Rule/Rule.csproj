@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculoBase.cs" />
+    <Compile Include="CoberturaFactory.cs" />
     <Compile Include="ReglasBase.cs" />
     <Compile Include="AntiguedadRiesgo.cs" />
     <Compile Include="Cobertura.cs" />

@@ -30,8 +30,6 @@ namespace TestPolicyCenter
                 Estado = "Vigente"
             };
 
-            
-
             var rules = new ReglasPoliza(poliza);
             poliza.Prima = rules.CalcularPrima();
             Console.WriteLine("Prima: " + poliza.Prima);
