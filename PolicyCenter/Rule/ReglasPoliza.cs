@@ -7,27 +7,29 @@ using System.Threading.Tasks;
 namespace Rule
 {
     public class ReglasPoliza
-    {
-        private Model.Poliza _poliza;
+    {        
+        private ICalculo _cobertura;
+        private IReglas _reglas;
 
         public ReglasPoliza(Model.Poliza poliza)
-        {
-            _poliza = poliza;
+        {            
+            _cobertura = new CalculoBase(poliza).Get();
+            _reglas = new ReglasBase();
         }
 
         public decimal CalcularPrima() 
         {
             //Cobertura A - Cobertura C - Cobertura C+ - Cobertura D -> Todo Riesgo !!!
-            switch (_poliza.IdCobertura)
+            switch (_cobertura.idCobertura)
             {
                 case 1:
-                    return new CoberturaA(_poliza).CalcularPrima();                    
+                    return new CoberturaA(_cobertura, _reglas).CalcularPrima();                    
                 case 2:
-                    return new CoberturaC(_poliza).CalcularPrima();       
+                    return new CoberturaC(_cobertura, _reglas).CalcularPrima();       
                 case 3:
-                    return new CoberturaCPlus(_poliza).CalcularPrima();   
+                    return new CoberturaCPlus(_cobertura, _reglas).CalcularPrima();   
                 case 4:
-                    return new CoberturaD(_poliza).CalcularPrima();
+                    return new CoberturaD(_cobertura, _reglas).CalcularPrima();
 
                 default:
                     break;                

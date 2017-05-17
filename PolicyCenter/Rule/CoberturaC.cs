@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace Rule
 {
-    public class CoberturaC : Cobertura
+    public class CoberturaC : CoberturaBase
     {
-
-        public CoberturaC(Model.Poliza poliza)
+        public CoberturaC(ICalculo cobertura, IReglas reglas)
         {
-            Poliza = poliza;
+            Cobertura = cobertura;
+            PrecioBase = Convert.ToDecimal(0.010);
+            Reglas = reglas;
         }
 
         public override decimal CalcularPrima()
         {
-            var riesgo = new UbicacionRiesgo().RiesgoUbicacion(Poliza.Persona.Localidad.Nombre);
-            var antiguedadRiego = new AntiguedadRiesgo().RiegoAntiguedad(Poliza.Bien.Anio);
-            return Poliza.Bien.Precio * Convert.ToDecimal(0.010) + (Poliza.Bien.Precio * riesgo) + (Poliza.Bien.Precio * antiguedadRiego);
+            var antiguedad = Reglas.riesgoAntiguedad(Cobertura.anio);
+            var riesgo = Reglas.riesgoUbicacion(Cobertura.riesgoUbicacion);
+
+            return (Cobertura.precio * PrecioBase) + (Cobertura.precio * riesgo) + (Cobertura.precio * antiguedad);
         }
         
     }

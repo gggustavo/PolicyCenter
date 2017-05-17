@@ -1,59 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Rule.Cobertura">
-    <Position X="3.5" Y="0.75" Width="1.5" />
+  <Class Name="Rule.CoberturaBase">
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAARAAAAAAAAAAAAAAAAAAAQAQAAAAAAA=</HashCode>
       <FileName>Cobertura.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cobertura" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Rule.CoberturaA">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CoberturaA.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Rule.CoberturaC">
-    <Position X="2.5" Y="3.25" Width="1.5" />
+    <Position X="2.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CoberturaC.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Rule.CoberturaCPlus">
-    <Position X="6.5" Y="3.25" Width="1.5" />
+    <Position X="6.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CoberturaCPlus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Rule.CoberturaD">
-    <Position X="4.5" Y="3.25" Width="1.5" />
+    <Position X="4.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CoberturaD.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Rule.UbicacionRiesgo">
-    <Position X="7" Y="0.75" Width="1.5" />
+  <Class Name="Rule.CalculoBase">
+    <Position X="9" Y="0.5" Width="2" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UbicacionRiesgo.cs</FileName>
+      <HashCode>AAECCAAAAAAABABAAAAAAAAAAAAAEABAAAAAAAAAAEA=</HashCode>
+      <FileName>CalculoBase.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Rule.AntiguedadRiesgo">
-    <Position X="8.75" Y="0.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
+  <Class Name="Rule.ReglasBase">
+    <Position X="11.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
-      <FileName>AntiguedadRiesgo.cs</FileName>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>ReglasBase.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
+  <Class Name="Rule.ReglasPoliza">
+    <Position X="9" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQACAAIAA=</HashCode>
+      <FileName>ReglasPoliza.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_cobertura" />
+      <Field Name="_reglas" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Rule.ICalculo">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAABAAAAAAAAAAAAAEABAAAAAAAAAAAA=</HashCode>
+      <FileName>ICalculo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Rule.IReglas">
+    <Position X="12" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>IReglas.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

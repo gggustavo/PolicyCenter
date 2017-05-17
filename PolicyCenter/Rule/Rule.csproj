@@ -39,12 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculoBase.cs" />
+    <Compile Include="ReglasBase.cs" />
     <Compile Include="AntiguedadRiesgo.cs" />
     <Compile Include="Cobertura.cs" />
     <Compile Include="CoberturaD.cs" />
     <Compile Include="CoberturaCPlus.cs" />
     <Compile Include="CoberturaC.cs" />
     <Compile Include="CoberturaA.cs" />
+    <Compile Include="ICalculo.cs" />
+    <Compile Include="IReglas.cs" />
     <Compile Include="ReglasPoliza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UbicacionRiesgo.cs" />
