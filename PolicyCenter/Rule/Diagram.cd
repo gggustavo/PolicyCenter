@@ -3,11 +3,11 @@
   <Class Name="Rule.CoberturaBase">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAARAAAAAAAAAAAAAAAAAAAQAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAABCAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Cobertura.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Cobertura" />
+      <Property Name="Calculo" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Rule.CoberturaA">
@@ -39,7 +39,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Rule.CalculoBase">
-    <Position X="9" Y="0.5" Width="2" />
+    <Position X="9" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
@@ -51,7 +51,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Rule.ReglasBase">
-    <Position X="11.75" Y="0.5" Width="1.75" />
+    <Position X="11.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>ReglasBase.cs</FileName>
@@ -59,14 +59,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Rule.ReglasPoliza">
-    <Position X="9" Y="2.75" Width="2" />
+    <Position X="9" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQACAAIAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAIAA=</HashCode>
       <FileName>ReglasPoliza.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_cobertura" />
       <Field Name="_reglas" />
+      <Field Name="_calculo" />
     </ShowAsAssociation>
   </Class>
   <Interface Name="Rule.ICalculo">
@@ -77,7 +77,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rule.IReglas">
-    <Position X="12" Y="2.75" Width="1.5" />
+    <Position X="11.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>IReglas.cs</FileName>

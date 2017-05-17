@@ -8,28 +8,28 @@ namespace Rule
 {
     public class ReglasPoliza
     {        
-        private ICalculo _cobertura;
+        private ICalculo _calculo;
         private IReglas _reglas;
 
         public ReglasPoliza(Model.Poliza poliza)
         {            
-            _cobertura = new CalculoBase(poliza).Get();
+            _calculo = new CalculoBase(poliza).Get();
             _reglas = new ReglasBase();
         }
 
         public decimal CalcularPrima() 
         {
             //Cobertura A - Cobertura C - Cobertura C+ - Cobertura D -> Todo Riesgo !!!
-            switch (_cobertura.idCobertura)
+            switch (_calculo.idCobertura)
             {
                 case 1:
-                    return new CoberturaA(_cobertura, _reglas).CalcularPrima();                    
+                    return new CoberturaA(_calculo, _reglas).CalcularPrima();                    
                 case 2:
-                    return new CoberturaC(_cobertura, _reglas).CalcularPrima();       
+                    return new CoberturaC(_calculo, _reglas).CalcularPrima();       
                 case 3:
-                    return new CoberturaCPlus(_cobertura, _reglas).CalcularPrima();   
+                    return new CoberturaCPlus(_calculo, _reglas).CalcularPrima();   
                 case 4:
-                    return new CoberturaD(_cobertura, _reglas).CalcularPrima();
+                    return new CoberturaD(_calculo, _reglas).CalcularPrima();
 
                 default:
                     break;                
