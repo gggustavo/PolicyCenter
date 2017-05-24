@@ -8,10 +8,11 @@ namespace Rule
 {
     public interface ICalculo
     {
-        decimal precio { get; set; }
-        string riesgoUbicacion { get; set; }
-        int anio { get; set; }
-        int idCobertura { get; set; }
+        decimal Precio { get; set; }
+        string RiesgoUbicacion { get; set; }
+        int Anio { get; set; }
+        int IdCobertura { get; set; }
         ICalculo Get();
     }
+
 }

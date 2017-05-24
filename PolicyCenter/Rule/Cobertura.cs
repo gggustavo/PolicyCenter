@@ -8,10 +8,7 @@ namespace Rule
 {
     public abstract class CoberturaBase
     {
-        public ICalculo Calculo { get; set; }
-        public IReglas Reglas { get; set; }
         public decimal PrecioBase { get; set; }
-
-        public abstract decimal CalcularPrima();
+        public abstract decimal CalcularPrima(ICalculo calculo, IReglas reglas);
     }
 }

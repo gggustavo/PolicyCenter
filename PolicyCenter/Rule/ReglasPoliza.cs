@@ -10,40 +10,24 @@ namespace Rule
     {        
         private ICalculo _calculo;
         private IReglas _reglas;
+        private CoberturaFactory _coberturaFactory;
 
         public ReglasPoliza(Model.Poliza poliza)
         {            
             _calculo = new CalculoBase(poliza).Get();
             _reglas = new ReglasBase();
+            _coberturaFactory = new CoberturaFactory();
 
-
-            //factory!
-            //var factory = new CoberturaFactory();
-            //factory.RegisterCobertura<CoberturaA>(0);
-            //factory.RegisterCobertura<CoberturaC>(1);
-            //factory.RegisterCobertura<CoberturaCPlus>(2);
-            //factory.RegisterCobertura<CoberturaD>(3);
-            //var value = factory.Get(0);
+            _coberturaFactory.RegisterCobertura<CoberturaA>(1);
+            _coberturaFactory.RegisterCobertura<CoberturaC>(2);
+            _coberturaFactory.RegisterCobertura<CoberturaCPlus>(3);
+            _coberturaFactory.RegisterCobertura<CoberturaD>(4);
         }
 
         public decimal CalcularPrima() 
         {
-            //Cobertura A - Cobertura C - Cobertura C+ - Cobertura D -> Todo Riesgo !!!
-            switch (_calculo.idCobertura)
-            {
-                case 1:
-                    return new CoberturaA(_calculo, _reglas).CalcularPrima();                    
-                case 2:
-                    return new CoberturaC(_calculo, _reglas).CalcularPrima();       
-                case 3:
-                    return new CoberturaCPlus(_calculo, _reglas).CalcularPrima();   
-                case 4:
-                    return new CoberturaD(_calculo, _reglas).CalcularPrima();
-
-                default:
-                    break;                
-            }
-            return 0;            
+            var factory = _coberturaFactory.Get(_calculo.IdCobertura);
+            return factory.CalcularPrima(_calculo, _reglas);           
         }
 
         public decimal CalcularPremio(decimal prima)
