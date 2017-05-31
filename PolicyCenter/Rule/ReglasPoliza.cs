@@ -16,7 +16,7 @@ namespace Rule
         {            
             _calculo = new CalculoBase(poliza).Get();
             _reglas = new ReglasBase();
-            _coberturaFactory = new CoberturaFactory();
+            _coberturaFactory = new CoberturaFactory(_calculo, _reglas);
 
             _coberturaFactory.RegisterCobertura<CoberturaA>(1);
             _coberturaFactory.RegisterCobertura<CoberturaC>(2);
@@ -27,7 +27,7 @@ namespace Rule
         public decimal CalcularPrima() 
         {
             var factory = _coberturaFactory.Get(_calculo.IdCobertura);
-            return factory.CalcularPrima(_calculo, _reglas);           
+            return factory.CalcularPrima();           
         }
 
         public decimal CalcularPremio(decimal prima)

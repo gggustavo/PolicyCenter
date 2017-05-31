@@ -8,17 +8,22 @@ namespace Rule
 {
     public class CoberturaD : CoberturaBase
     {
-        public CoberturaD()
+        private ICalculo _calculo;
+        private IReglas _reglas;
+
+        public CoberturaD(ICalculo calculo, IReglas reglas)
         {
             PrecioBase = Convert.ToDecimal(0.02);
+            _calculo = calculo;
+            _reglas = reglas;
         }
 
-        public override decimal CalcularPrima(ICalculo calculo, IReglas reglas)
+        public override decimal CalcularPrima()
         {
-            var antiguedad = reglas.riesgoAntiguedad(calculo.Anio);
-            var riesgo = reglas.riesgoUbicacion(calculo.RiesgoUbicacion);
+            var antiguedad = _reglas.riesgoAntiguedad(_calculo.Anio);
+            var riesgo = _reglas.riesgoUbicacion(_calculo.RiesgoUbicacion);
 
-            return (calculo.Precio * PrecioBase) + (calculo.Precio * riesgo) + (calculo.Precio * antiguedad);
+            return (_calculo.Precio * PrecioBase) + (_calculo.Precio * riesgo) + (_calculo.Precio * antiguedad);
         }
         
     }
