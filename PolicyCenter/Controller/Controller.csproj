@@ -52,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrganizadoresController.cs" />
+    <Compile Include="ProductoresController.cs" />
+    <Compile Include="LocalidadesController.cs" />
+    <Compile Include="ModelosController.cs" />
+    <Compile Include="MarcasController.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

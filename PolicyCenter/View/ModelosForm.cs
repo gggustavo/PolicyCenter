@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class MarcasForm : Form
+    public partial class ModelosForm : Form
     {
-        private Controller.MarcasController marcasController;
+        private Controller.ModelosController modelosController;
 
-        public MarcasForm()
+        public ModelosForm()
         {
             InitializeComponent();
 
-            marcasController = new Controller.MarcasController();
+            modelosController = new Controller.ModelosController();
 
-            marcaBindingSource.DataSource = marcasController.ObtenerMarcas();
+            modeloBindingSource.DataSource = modelosController.ObtenerModelos();
         }
-
-
     }
 }

@@ -28,112 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Marcas");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Admnistración", new System.Windows.Forms.TreeNode[] {
-            treeNode3});
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeViewLeft = new System.Windows.Forms.TreeView();
-            this.showLeft = new System.Windows.Forms.Button();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.organizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitContainer1
+            // menuStrip1
             // 
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.administracionToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(106, 418);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // splitContainer1.Panel1
+            // administracionToolStripMenuItem
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.treeViewLeft);
-            this.splitContainer1.Panel1.ClientSizeChanged += new System.EventHandler(this.splitContainer1_Panel1_ClientSizeChanged);
+            this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.marcasToolStripMenuItem,
+            this.modelosToolStripMenuItem,
+            this.localidadesToolStripMenuItem,
+            this.organizadoresToolStripMenuItem,
+            this.productoresToolStripMenuItem});
+            this.administracionToolStripMenuItem.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(93, 19);
+            this.administracionToolStripMenuItem.Text = "Administración";
             // 
-            // splitContainer1.Panel2
+            // marcasToolStripMenuItem
             // 
-            this.splitContainer1.Panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.splitContainer1.Size = new System.Drawing.Size(750, 484);
-            this.splitContainer1.SplitterDistance = 108;
-            this.splitContainer1.TabIndex = 1;
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
-            // treeViewLeft
+            // modelosToolStripMenuItem
             // 
-            this.treeViewLeft.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeViewLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewLeft.Location = new System.Drawing.Point(0, 0);
-            this.treeViewLeft.Name = "treeViewLeft";
-            treeNode3.Name = "Marca";
-            treeNode3.Text = "Marcas";
-            treeNode4.Name = "Adm";
-            treeNode4.Text = "Admnistración";
-            this.treeViewLeft.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-            this.treeViewLeft.Size = new System.Drawing.Size(106, 482);
-            this.treeViewLeft.TabIndex = 0;
-            this.treeViewLeft.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewLeft_NodeMouseClick);
+            this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
+            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modelosToolStripMenuItem.Text = "Modelos";
+            this.modelosToolStripMenuItem.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
             // 
-            // showLeft
+            // localidadesToolStripMenuItem
             // 
-            this.showLeft.Location = new System.Drawing.Point(5, 5);
-            this.showLeft.Name = "showLeft";
-            this.showLeft.Size = new System.Drawing.Size(28, 26);
-            this.showLeft.TabIndex = 2;
-            this.showLeft.Text = "<<";
-            this.showLeft.UseVisualStyleBackColor = true;
-            this.showLeft.Click += new System.EventHandler(this.showLeft_Click);
+            this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.localidadesToolStripMenuItem.Text = "Localidades";
+            this.localidadesToolStripMenuItem.Click += new System.EventHandler(this.localidadesToolStripMenuItem_Click);
             // 
-            // splitContainer2
+            // productoresToolStripMenuItem
             // 
-            this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 446);
-            this.splitContainer2.Name = "splitContainer2";
+            this.productoresToolStripMenuItem.Name = "productoresToolStripMenuItem";
+            this.productoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productoresToolStripMenuItem.Text = "Productores";
+            this.productoresToolStripMenuItem.Click += new System.EventHandler(this.productoresToolStripMenuItem_Click);
             // 
-            // splitContainer2.Panel1
+            // organizadoresToolStripMenuItem
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.showLeft);
-            this.splitContainer2.Panel1MinSize = 20;
-            this.splitContainer2.Panel2Collapsed = true;
-            this.splitContainer2.Size = new System.Drawing.Size(750, 38);
-            this.splitContainer2.SplitterDistance = 250;
-            this.splitContainer2.TabIndex = 3;
+            this.organizadoresToolStripMenuItem.Name = "organizadoresToolStripMenuItem";
+            this.organizadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.organizadoresToolStripMenuItem.Text = "Organizadores";
+            this.organizadoresToolStripMenuItem.Click += new System.EventHandler(this.organizadoresToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(93, 19);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(750, 484);
-            this.Controls.Add(this.splitContainer2);
-            this.Controls.Add(this.splitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ClientSize = new System.Drawing.Size(1067, 418);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Policy Center";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TreeView treeViewLeft;
-        private System.Windows.Forms.Button showLeft;
-        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem administracionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modelosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem organizadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+
+
 
 
 

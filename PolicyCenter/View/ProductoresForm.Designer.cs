@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class MarcasForm
+    partial class ProductoresForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idProductorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matriculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -43,24 +44,25 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idMarcaDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.marcaBindingSource;
+            this.idProductorDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.matriculaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.productorBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(836, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(607, 261);
             this.dataGridView1.TabIndex = 0;
             // 
-            // marcaBindingSource
+            // productorBindingSource
             // 
-            this.marcaBindingSource.DataSource = typeof(Model.Marca);
+            this.productorBindingSource.DataSource = typeof(Model.Productor);
             // 
-            // idMarcaDataGridViewTextBoxColumn
+            // idProductorDataGridViewTextBoxColumn
             // 
-            this.idMarcaDataGridViewTextBoxColumn.DataPropertyName = "IdMarca";
-            this.idMarcaDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idMarcaDataGridViewTextBoxColumn.Name = "idMarcaDataGridViewTextBoxColumn";
+            this.idProductorDataGridViewTextBoxColumn.DataPropertyName = "IdProductor";
+            this.idProductorDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idProductorDataGridViewTextBoxColumn.Name = "idProductorDataGridViewTextBoxColumn";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -69,20 +71,23 @@
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.Width = 350;
             // 
-            // MarcasForm
+            // matriculaDataGridViewTextBoxColumn
+            // 
+            this.matriculaDataGridViewTextBoxColumn.DataPropertyName = "Matricula";
+            this.matriculaDataGridViewTextBoxColumn.HeaderText = "Matricula";
+            this.matriculaDataGridViewTextBoxColumn.Name = "matriculaDataGridViewTextBoxColumn";
+            // 
+            // ProductoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 365);
+            this.ClientSize = new System.Drawing.Size(607, 261);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "MarcasForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Marcas";
+            this.Name = "ProductoresForm";
+            this.Text = "Productores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -90,9 +95,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMarcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProductorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource marcaBindingSource;
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn matriculaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource productorBindingSource;
     }
 }

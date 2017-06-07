@@ -18,50 +18,52 @@ namespace View
             Controller.Test.Initialize();
         }
 
-        private void treeViewLeft_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
-            if (e.Node.Text == "Marcas")
-            {
-                var marcas = new MarcasForm();
-                marcas.TopLevel = false;
-                marcas.ShowInTaskbar = false;
-                marcas.Visible = true;
-                marcas.WindowState = FormWindowState.Maximized;
-                marcas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-                splitContainer1.Panel2.Controls.Add(marcas);
-            }
-            else
-            {
-                splitContainer1.Panel2.Controls.Clear();
-            }
+            base.OnLoad(e);
         }
 
-        private void splitContainer1_Panel1_ClientSizeChanged(object sender, EventArgs e)
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var control = (SplitterPanel)(sender);
-            
-            if (control.Width == splitContainer1.Panel1MinSize)
-            {
-                splitContainer1.Panel1Collapsed = true;
-                showLeft.Text = ">>";
-            }
+            ShowForm(new MarcasForm());
         }
 
-        
-        private void showLeft_Click(object sender, EventArgs e)
+        private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (splitContainer1.Panel1Collapsed)
-            {
-                splitContainer1.SplitterDistance = 100;
-                splitContainer1.Panel1Collapsed = false;  
-                showLeft.Text = "<<";
-            }
-            else
-            {
-                splitContainer1.Panel1Collapsed = true;  
-                showLeft.Text = ">>";
-            }
+            ShowForm(new ModelosForm());
         }
+
+        private void localidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new LocalidadesForm());
+        }
+
+        private void organizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new OrganizadoresForm());
+        }
+
+        private void productoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new ProductoresForm());
+        }
+
+
+        private void ShowForm(Form form)
+        {
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.ShowInTaskbar = false;
+            form.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+       
+       
 
  
     }

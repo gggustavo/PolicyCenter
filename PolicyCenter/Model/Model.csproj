@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Bien.cs" />
     <Compile Include="Cobertura.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="ContextInitializer.cs" />
     <Compile Include="Direccion.cs" />
     <Compile Include="Localidad.cs" />

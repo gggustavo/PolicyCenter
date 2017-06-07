@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class MarcasForm
+    partial class LocalidadesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idLocalidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codPostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localidadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -43,46 +44,50 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idMarcaDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.marcaBindingSource;
+            this.idLocalidadDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.codPostalDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.localidadBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(836, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(610, 344);
             this.dataGridView1.TabIndex = 0;
             // 
-            // marcaBindingSource
+            // localidadBindingSource
             // 
-            this.marcaBindingSource.DataSource = typeof(Model.Marca);
+            this.localidadBindingSource.DataSource = typeof(Model.Localidad);
             // 
-            // idMarcaDataGridViewTextBoxColumn
+            // idLocalidadDataGridViewTextBoxColumn
             // 
-            this.idMarcaDataGridViewTextBoxColumn.DataPropertyName = "IdMarca";
-            this.idMarcaDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idMarcaDataGridViewTextBoxColumn.Name = "idMarcaDataGridViewTextBoxColumn";
+            this.idLocalidadDataGridViewTextBoxColumn.DataPropertyName = "IdLocalidad";
+            this.idLocalidadDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idLocalidadDataGridViewTextBoxColumn.Name = "idLocalidadDataGridViewTextBoxColumn";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 350;
+            this.nombreDataGridViewTextBoxColumn.Width = 250;
             // 
-            // MarcasForm
+            // codPostalDataGridViewTextBoxColumn
+            // 
+            this.codPostalDataGridViewTextBoxColumn.DataPropertyName = "CodPostal";
+            this.codPostalDataGridViewTextBoxColumn.HeaderText = "Codigo Postal";
+            this.codPostalDataGridViewTextBoxColumn.Name = "codPostalDataGridViewTextBoxColumn";
+            // 
+            // LocalidadesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 365);
+            this.ClientSize = new System.Drawing.Size(610, 344);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "MarcasForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Marcas";
+            this.Name = "LocalidadesForm";
+            this.Text = "Localidades";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localidadBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -90,9 +95,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMarcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLocalidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource marcaBindingSource;
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn codPostalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource localidadBindingSource;
     }
 }

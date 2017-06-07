@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LocalidadesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalidadesForm.Designer.cs">
+      <DependentUpon>LocalidadesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,13 +76,43 @@
     <Compile Include="MarcasForm.Designer.cs">
       <DependentUpon>MarcasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModelosForm.Designer.cs">
+      <DependentUpon>ModelosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizadoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizadoresForm.Designer.cs">
+      <DependentUpon>OrganizadoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoresForm.Designer.cs">
+      <DependentUpon>ProductoresForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LocalidadesForm.resx">
+      <DependentUpon>LocalidadesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarcasForm.resx">
       <DependentUpon>MarcasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelosForm.resx">
+      <DependentUpon>ModelosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizadoresForm.resx">
+      <DependentUpon>OrganizadoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoresForm.resx">
+      <DependentUpon>ProductoresForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +125,11 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Model.Localidad.datasource" />
+    <None Include="Properties\DataSources\Model.Marca.datasource" />
+    <None Include="Properties\DataSources\Model.Modelo.datasource" />
+    <None Include="Properties\DataSources\Model.Organizador.datasource" />
+    <None Include="Properties\DataSources\Model.Productor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +147,10 @@
     <ProjectReference Include="..\Controller\Controller.csproj">
       <Project>{6d502247-5f1d-4c8c-948e-15975a740d3f}</Project>
       <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{55c18a57-47d2-4e6e-94e9-3470fdd7b273}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
