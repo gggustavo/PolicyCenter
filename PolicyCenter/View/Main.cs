@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,21 @@ namespace View
         {
             InitializeComponent();
             Controller.Test.Initialize();
-        }
 
+            MdiClient ctlMDI;
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {                    
+                    ctlMDI = (MdiClient)ctl;                    
+                    ctlMDI.BackColor = Color.GhostWhite;
+                }
+                catch (InvalidCastException)
+                {                 
+                }
+            }
+        }
+       
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -48,7 +62,6 @@ namespace View
             ShowForm(new ProductoresForm());
         }
 
-
         private void ShowForm(Form form)
         {
             form.MdiParent = this;
@@ -61,10 +74,6 @@ namespace View
         {
             Close();
         }
-
-       
-       
-
  
     }
 }
