@@ -202,6 +202,10 @@
       <Project>{55c18a57-47d2-4e6e-94e9-3470fdd7b273}</Project>
       <Name>Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Rule\Rule.csproj">
+      <Project>{1b80f351-290f-414d-ae14-8882f6653f75}</Project>
+      <Name>Rule</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

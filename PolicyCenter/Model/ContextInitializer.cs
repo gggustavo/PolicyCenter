@@ -887,12 +887,12 @@ namespace Model
 
             context.Cobertura.Add(cobertura);
 
-            cobertura = new Cobertura
-            {
-                Nombre = "B",
-                Riesgos = context.Riesgo.Where(_ => _.IdRiesgo == 1 && _.IdRiesgo == 2).ToList()
-            };
-            context.Cobertura.Add(cobertura);
+            //cobertura = new Cobertura
+            //{
+            //    Nombre = "B",
+            //    Riesgos = context.Riesgo.Where(_ => _.IdRiesgo == 1 && _.IdRiesgo == 2).ToList()
+            //};
+            //context.Cobertura.Add(cobertura);
 
             cobertura = new Cobertura
             {

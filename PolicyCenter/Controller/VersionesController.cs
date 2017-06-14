@@ -11,7 +11,7 @@ namespace Controller
         public IList<Model.Version> ObtenerVersiones()
         {
             var context = Model.Context.GetInstance();
-            return context.Version.ToList();
+            return context.Version.Include("Models").ToList();
         }
     }
 }
