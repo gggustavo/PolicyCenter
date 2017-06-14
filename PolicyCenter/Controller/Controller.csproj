@@ -52,7 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VersionesController.cs" />
+    <Compile Include="VehiculosController.cs" />
+    <Compile Include="RamosController.cs" />
     <Compile Include="OrganizadoresController.cs" />
+    <Compile Include="PersonasController.cs" />
+    <Compile Include="CoberturasController.cs" />
     <Compile Include="ProductoresController.cs" />
     <Compile Include="LocalidadesController.cs" />
     <Compile Include="ModelosController.cs" />

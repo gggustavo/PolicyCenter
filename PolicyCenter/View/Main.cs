@@ -74,6 +74,31 @@ namespace View
         {
             Close();
         }
+
+        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new PersonasForm());
+        }
+
+        private void coberturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new CoberturasForm());
+        }
+
+        private void ramosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new RamosForm());
+        }
+
+        private void autosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new VehiculosForm());
+        }
+
+        private void autosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ShowForm(new CotizadorVehiculoForm());
+        }
  
     }
 }

@@ -58,6 +58,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoberturasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoberturasForm.Designer.cs">
+      <DependentUpon>CoberturasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CotizadorVehiculoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CotizadorVehiculoForm.Designer.cs">
+      <DependentUpon>CotizadorVehiculoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalidadesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     <Compile Include="OrganizadoresForm.Designer.cs">
       <DependentUpon>OrganizadoresForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonasForm.Designer.cs">
+      <DependentUpon>PersonasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +114,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RamosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RamosForm.Designer.cs">
+      <DependentUpon>RamosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiculosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiculosForm.Designer.cs">
+      <DependentUpon>VehiculosForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CoberturasForm.resx">
+      <DependentUpon>CoberturasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CotizadorVehiculoForm.resx">
+      <DependentUpon>CotizadorVehiculoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LocalidadesForm.resx">
       <DependentUpon>LocalidadesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +147,9 @@
     <EmbeddedResource Include="OrganizadoresForm.resx">
       <DependentUpon>OrganizadoresForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonasForm.resx">
+      <DependentUpon>PersonasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductoresForm.resx">
       <DependentUpon>ProductoresForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,12 +163,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RamosForm.resx">
+      <DependentUpon>RamosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiculosForm.resx">
+      <DependentUpon>VehiculosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Model.Cobertura.datasource" />
     <None Include="Properties\DataSources\Model.Localidad.datasource" />
     <None Include="Properties\DataSources\Model.Marca.datasource" />
     <None Include="Properties\DataSources\Model.Modelo.datasource" />
     <None Include="Properties\DataSources\Model.Organizador.datasource" />
+    <None Include="Properties\DataSources\Model.Persona.datasource" />
     <None Include="Properties\DataSources\Model.Productor.datasource" />
+    <None Include="Properties\DataSources\Model.Ramo.datasource" />
+    <None Include="Properties\DataSources\Model.Vehiculo.datasource" />
+    <None Include="Properties\DataSources\Model.Version.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

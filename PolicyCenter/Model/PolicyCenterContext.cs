@@ -82,8 +82,7 @@ namespace Model
         public DbSet<Ramo> Ramo { get; set; }
         public DbSet<Riesgo> Riesgo { get; set; }
         public DbSet<Cobertura> Cobertura { get; set; }
-        
-
+        public DbSet<Vehiculo> Vehiculo { get; set; }
 
     }
 }
