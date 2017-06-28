@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.productorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idProductorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matriculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,12 +51,8 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(607, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(708, 241);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // productorBindingSource
-            // 
-            this.productorBindingSource.DataSource = typeof(Model.Productor);
             // 
             // idProductorDataGridViewTextBoxColumn
             // 
@@ -77,12 +73,17 @@
             this.matriculaDataGridViewTextBoxColumn.HeaderText = "Matricula";
             this.matriculaDataGridViewTextBoxColumn.Name = "matriculaDataGridViewTextBoxColumn";
             // 
+            // productorBindingSource
+            // 
+            this.productorBindingSource.DataSource = typeof(Model.Productor);
+            // 
             // ProductoresForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 261);
+            this.ClientSize = new System.Drawing.Size(708, 241);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ProductoresForm";
             this.Text = "Productores";

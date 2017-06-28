@@ -51,7 +51,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(610, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(712, 318);
             this.dataGridView1.TabIndex = 0;
             // 
             // localidadBindingSource
@@ -69,20 +69,22 @@
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 250;
+            this.nombreDataGridViewTextBoxColumn.Width = 350;
             // 
             // codPostalDataGridViewTextBoxColumn
             // 
             this.codPostalDataGridViewTextBoxColumn.DataPropertyName = "CodPostal";
             this.codPostalDataGridViewTextBoxColumn.HeaderText = "Codigo Postal";
             this.codPostalDataGridViewTextBoxColumn.Name = "codPostalDataGridViewTextBoxColumn";
+            this.codPostalDataGridViewTextBoxColumn.Width = 150;
             // 
             // LocalidadesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 344);
+            this.ClientSize = new System.Drawing.Size(712, 318);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "LocalidadesForm";
             this.Text = "Localidades";
@@ -95,9 +97,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource localidadBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLocalidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codPostalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource localidadBindingSource;
     }
 }

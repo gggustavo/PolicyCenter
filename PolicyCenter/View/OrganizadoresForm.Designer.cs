@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.organizadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idOrganizadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProductorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.organizadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.organizadorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +53,8 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(552, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 241);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // organizadorBindingSource
-            // 
-            this.organizadorBindingSource.DataSource = typeof(Model.Organizador);
             // 
             // idOrganizadorDataGridViewTextBoxColumn
             // 
@@ -87,12 +83,17 @@
             this.productoresDataGridViewTextBoxColumn.Name = "productoresDataGridViewTextBoxColumn";
             this.productoresDataGridViewTextBoxColumn.Visible = false;
             // 
+            // organizadorBindingSource
+            // 
+            this.organizadorBindingSource.DataSource = typeof(Model.Organizador);
+            // 
             // OrganizadoresForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 261);
+            this.ClientSize = new System.Drawing.Size(644, 241);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "OrganizadoresForm";
             this.Text = "Organizadores";

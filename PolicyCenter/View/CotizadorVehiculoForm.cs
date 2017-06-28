@@ -28,10 +28,10 @@ namespace View
         {
             InitializeComponent();
 
-            marcaBindingSource.DataSource = marcasController.ObtenerMarcas();
-            marcas.SelectedIndex = -1;
-
+            marcaBindingSource.DataSource = marcasController.ObtenerMarcas();            
             coberturaBindingSource.DataSource = coberturasController.ObtenerCoberturas();
+
+            Reset();
         }
 
         private void marcas_SelectionChangeCommitted(object sender, EventArgs e)
@@ -65,8 +65,9 @@ namespace View
 
             vehiculoSelect = vehiculo;
 
-            if (vehiculo == null) { MessageBox.Show("Precio No Disponible"); return; }            
-            precio.Text = string.Format("{0:000,000.##}", vehiculo.Precio);            
+            if (vehiculo == null) { MessageBox.Show("Precio No Disponible"); return; }
+            precio.Text = string.Format("{0:000,000.## $}", vehiculo.Precio);
+            auto.Text = vehiculo.Marca.Nombre + "-" + vehiculo.Modelo.Nombre + "-" + vehiculo.Version.Nombre;
         }
 
         private void buscar_Click(object sender, EventArgs e)
@@ -86,6 +87,7 @@ namespace View
             cuilPersona.Text = persona.Cuil;
             celularPersona.Text = persona.Celular;
             localidadPersona.Text = persona.Localidad.Nombre;
+            cotizar.Enabled = true;
 
         }
 
@@ -108,13 +110,42 @@ namespace View
             var rules = new ReglasPoliza(poliza);
             poliza.Prima = rules.CalcularPrima();
 
-            prima.Text = string.Format("{0:##0,000.##}", poliza.Prima);
+            prima.Text = string.Format("{0:###,000.## $}", poliza.Prima);
 
             poliza.Premio = rules.CalcularPremio(poliza.Prima);
 
-            premio.Text = string.Format("{0:##0,000.##}", poliza.Premio);
+            premio.Text = string.Format("{0:###,000.## $}", poliza.Premio);
 
-            cuotas.Text = string.Format("{0:##0,000.##}", (poliza.Premio / 6));
+            cuotas.Text = string.Format("{0:###,000.## $}", (poliza.Premio / 6));
+        }
+
+        private void reinciar_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Reset()
+        {
+            marcas.SelectedIndex = -1;
+            modelos.SelectedIndex = -1;
+            versiones.SelectedIndex = -1;
+            coberturasTipos.SelectedIndex = 0;
+
+            personaSelect = null;
+            nombrePersona.Text = string.Empty;
+            apellidoPersona.Text = string.Empty;
+            emailPersona.Text = string.Empty;
+            cuilPersona.Text = string.Empty;
+            celularPersona.Text = string.Empty;
+            localidadPersona.Text = string.Empty;
+            cotizar.Enabled = false;
+
+            prima.Text = string.Empty;
+            premio.Text = string.Empty;
+            cuotas.Text = string.Empty;
+            precio.Text = string.Empty;
+
+            auto.Text = string.Empty;
         }
 
        

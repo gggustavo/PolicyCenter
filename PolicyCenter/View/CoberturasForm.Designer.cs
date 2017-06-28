@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.coberturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idCoberturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.riesgosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coberturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coberturaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,12 +51,8 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(469, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 313);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // coberturaBindingSource
-            // 
-            this.coberturaBindingSource.DataSource = typeof(Model.Cobertura);
             // 
             // idCoberturaDataGridViewTextBoxColumn
             // 
@@ -78,12 +74,17 @@
             this.riesgosDataGridViewTextBoxColumn.Name = "riesgosDataGridViewTextBoxColumn";
             this.riesgosDataGridViewTextBoxColumn.Visible = false;
             // 
+            // coberturaBindingSource
+            // 
+            this.coberturaBindingSource.DataSource = typeof(Model.Cobertura);
+            // 
             // CoberturasForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 339);
+            this.ClientSize = new System.Drawing.Size(547, 313);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CoberturasForm";
             this.ShowInTaskbar = false;

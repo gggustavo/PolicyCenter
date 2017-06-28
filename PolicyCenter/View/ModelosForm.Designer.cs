@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.modeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idModeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -55,17 +55,13 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(591, 408);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 377);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // modeloBindingSource
-            // 
-            this.modeloBindingSource.DataSource = typeof(Model.Modelo);
             // 
             // idModeloDataGridViewTextBoxColumn
             // 
             this.idModeloDataGridViewTextBoxColumn.DataPropertyName = "IdModelo";
-            this.idModeloDataGridViewTextBoxColumn.HeaderText = "IdModelo";
+            this.idModeloDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idModeloDataGridViewTextBoxColumn.Name = "idModeloDataGridViewTextBoxColumn";
             // 
             // nombreDataGridViewTextBoxColumn
@@ -96,12 +92,17 @@
             this.versionsDataGridViewTextBoxColumn.Name = "versionsDataGridViewTextBoxColumn";
             this.versionsDataGridViewTextBoxColumn.Visible = false;
             // 
+            // modeloBindingSource
+            // 
+            this.modeloBindingSource.DataSource = typeof(Model.Modelo);
+            // 
             // ModelosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 408);
+            this.ClientSize = new System.Drawing.Size(689, 377);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ModelosForm";
             this.Text = "Modelos";

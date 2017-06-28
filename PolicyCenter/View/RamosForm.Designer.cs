@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ramoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idRamoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ramoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ramoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,12 +49,8 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(426, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 231);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ramoBindingSource
-            // 
-            this.ramoBindingSource.DataSource = typeof(Model.Ramo);
             // 
             // idRamoDataGridViewTextBoxColumn
             // 
@@ -69,12 +65,17 @@
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.Width = 250;
             // 
+            // ramoBindingSource
+            // 
+            this.ramoBindingSource.DataSource = typeof(Model.Ramo);
+            // 
             // RamosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 250);
+            this.ClientSize = new System.Drawing.Size(497, 231);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RamosForm";
             this.ShowInTaskbar = false;

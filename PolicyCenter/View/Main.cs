@@ -65,8 +65,9 @@ namespace View
         private void ShowForm(Form form)
         {
             form.MdiParent = this;
-            form.WindowState = FormWindowState.Maximized;
             form.ShowInTaskbar = false;
+            form.ShowIcon = false;
+            form.Dock = DockStyle.Fill;
             form.Show();
         }
 
@@ -98,6 +99,11 @@ namespace View
         private void autosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ShowForm(new CotizadorVehiculoForm());
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
  
     }
