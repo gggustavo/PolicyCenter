@@ -13,5 +13,21 @@ namespace Controller
             var context = Model.Context.GetInstance();
             return context.Persona.Include("Direccion").Include("Localidad").ToList();
         }
+
+
+        public void AgregarPersona(Model.Persona persona)
+        {
+            var context = Model.Context.GetInstance();
+            context.Persona.Add(persona);
+            context.SaveChanges();
+        }
+
+        public void Eliminar(int idPersona)
+        {
+            var context = Model.Context.GetInstance();
+            var person = context.Persona.Find(idPersona);
+            context.Persona.Remove(person);
+            context.SaveChanges();
+        }
     }
 }

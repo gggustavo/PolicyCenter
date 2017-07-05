@@ -19,13 +19,54 @@ namespace View
         {
             InitializeComponent();
 
-            personaBindingSource.DataSource = personController.ObtenerPersonas()
-                                                              .Select(_ => new { IdPersona = _.IdPersona , Nombre = _.Nombre,
-                                                                                 Apellido = _.Apellido, Dni = _.Dni, Cuit = _.Cuit,
-                                                                                 Cuil = _.Cuil, Edad = _.Edad, Celular = _.Celular,
-                                                                                 Email = _.Email, Localidad = _.Localidad.Nombre,
-                                                                                 Direccion = _.Direccion.Calle + " " + _.Direccion.Numero
-                                                                                });
+            ObtenerPersonas();
+        }
+
+        private void ObtenerPersonas()
+        {
+            personaBindingSource.DataSource = personController.ObtenerPersonas().Select(Data);
+        }
+
+
+        private dynamic Data(Model.Persona person)
+        {
+            return new 
+            {
+                IdPersona = person.IdPersona,
+                Nombre = person.Nombre,
+                Apellido = person.Apellido,
+                Dni = person.Dni,
+                Cuit = person.Cuit,
+                Cuil = person.Cuil,
+                Edad = person.Edad,
+                Celular = person.Celular,
+                Email = person.Email,
+                Localidad = person.Localidad.Nombre,
+                Direccion = person.Direccion.Calle + " " + person.Direccion.Numero
+            };
+        }
+
+        private void reinciar_Click(object sender, EventArgs e)
+        {
+            ObtenerPersonas();
+        }
+
+        private void agregar_Click(object sender, EventArgs e)
+        {
+            var frm = new PersonasAddForm();
+            frm.ShowDialog();
+        }
+
+        private void borrar_Click(object sender, EventArgs e)
+        {
+            if (personaBindingSource.Current == null) MessageBox.Show("Seleccione una persona");
+
+            dynamic current = personaBindingSource.Current;
+            var idPersona = current.IdPersona;
+
+            personController.Eliminar(idPersona);
+
+            ObtenerPersonas();
         }
     }
 }

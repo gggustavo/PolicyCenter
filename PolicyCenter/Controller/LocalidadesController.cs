@@ -13,5 +13,13 @@ namespace Controller
             var context = Model.Context.GetInstance();
             return context.Localidad.ToList();
         }
+
+        public Model.Localidad ObtenerLocalidadesId(int id)
+        {
+            var context = Model.Context.GetInstance();
+            return context.Localidad.Find(id);
+        }
+
+
     }
 }

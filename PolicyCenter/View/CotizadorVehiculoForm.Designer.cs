@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CotizadorVehiculoForm));
             this.marcas = new System.Windows.Forms.ComboBox();
             this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -69,9 +70,12 @@
             this.cuotas = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.reinciar = new System.Windows.Forms.Button();
             this.cotizar = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.versionBindingSource)).BeginInit();
@@ -87,7 +91,7 @@
             this.marcas.DataSource = this.marcaBindingSource;
             this.marcas.DisplayMember = "Nombre";
             this.marcas.FormattingEnabled = true;
-            this.marcas.Location = new System.Drawing.Point(83, 26);
+            this.marcas.Location = new System.Drawing.Point(83, 14);
             this.marcas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.marcas.Name = "marcas";
             this.marcas.Size = new System.Drawing.Size(156, 20);
@@ -102,7 +106,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 29);
+            this.label1.Location = new System.Drawing.Point(34, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 12);
             this.label1.TabIndex = 1;
@@ -111,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(357, 29);
+            this.label2.Location = new System.Drawing.Point(357, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 12);
             this.label2.TabIndex = 3;
@@ -122,7 +126,7 @@
             this.modelos.DataSource = this.modeloBindingSource;
             this.modelos.DisplayMember = "Nombre";
             this.modelos.FormattingEnabled = true;
-            this.modelos.Location = new System.Drawing.Point(407, 26);
+            this.modelos.Location = new System.Drawing.Point(407, 14);
             this.modelos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.modelos.Name = "modelos";
             this.modelos.Size = new System.Drawing.Size(262, 20);
@@ -137,7 +141,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(720, 29);
+            this.label3.Location = new System.Drawing.Point(720, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 12);
             this.label3.TabIndex = 5;
@@ -148,7 +152,7 @@
             this.versiones.DataSource = this.versionBindingSource;
             this.versiones.DisplayMember = "Nombre";
             this.versiones.FormattingEnabled = true;
-            this.versiones.Location = new System.Drawing.Point(772, 26);
+            this.versiones.Location = new System.Drawing.Point(772, 14);
             this.versiones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.versiones.Name = "versiones";
             this.versiones.Size = new System.Drawing.Size(264, 20);
@@ -170,14 +174,13 @@
             this.groupBox1.Controls.Add(this.versiones);
             this.groupBox1.Controls.Add(this.modelos);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(14, 44);
+            this.groupBox1.Location = new System.Drawing.Point(171, 89);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1206, 60);
+            this.groupBox1.Size = new System.Drawing.Size(1049, 40);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Vehiculo";
             // 
             // groupBox2
             // 
@@ -196,14 +199,13 @@
             this.groupBox2.Controls.Add(this.nombrePersona);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(15, 170);
+            this.groupBox2.Location = new System.Drawing.Point(171, 201);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1205, 122);
+            this.groupBox2.Size = new System.Drawing.Size(1049, 122);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos de la Persona";
             // 
             // localidadPersona
             // 
@@ -279,12 +281,13 @@
             // 
             // buscar
             // 
-            this.buscar.Location = new System.Drawing.Point(644, 24);
+            this.buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buscar.BackgroundImage")));
+            this.buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buscar.Location = new System.Drawing.Point(643, 26);
             this.buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buscar.Name = "buscar";
-            this.buscar.Size = new System.Drawing.Size(89, 22);
+            this.buscar.Size = new System.Drawing.Size(20, 20);
             this.buscar.TabIndex = 4;
-            this.buscar.Text = "Buscar";
             this.buscar.UseVisualStyleBackColor = true;
             this.buscar.Click += new System.EventHandler(this.buscar_Click);
             // 
@@ -328,19 +331,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.coberturasTipos);
-            this.groupBox4.Location = new System.Drawing.Point(15, 110);
+            this.groupBox4.Location = new System.Drawing.Point(171, 131);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(1205, 55);
+            this.groupBox4.Size = new System.Drawing.Size(1049, 40);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Cobertura";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(35, 26);
+            this.label13.Location = new System.Drawing.Point(35, 14);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(35, 12);
             this.label13.TabIndex = 7;
@@ -351,7 +353,7 @@
             this.coberturasTipos.DataSource = this.coberturaBindingSource;
             this.coberturasTipos.DisplayMember = "Nombre";
             this.coberturasTipos.FormattingEnabled = true;
-            this.coberturasTipos.Location = new System.Drawing.Point(82, 24);
+            this.coberturasTipos.Location = new System.Drawing.Point(82, 12);
             this.coberturasTipos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.coberturasTipos.Name = "coberturasTipos";
             this.coberturasTipos.Size = new System.Drawing.Size(156, 20);
@@ -384,9 +386,9 @@
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(3, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 18);
+            this.label4.Size = new System.Drawing.Size(138, 18);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Precio del 0km";
+            this.label4.Text = "PRECIO DEL 0KM";
             // 
             // autoLabel
             // 
@@ -397,9 +399,9 @@
             this.autoLabel.ForeColor = System.Drawing.Color.DimGray;
             this.autoLabel.Location = new System.Drawing.Point(3, 0);
             this.autoLabel.Name = "autoLabel";
-            this.autoLabel.Size = new System.Drawing.Size(142, 18);
+            this.autoLabel.Size = new System.Drawing.Size(162, 18);
             this.autoLabel.TabIndex = 19;
-            this.autoLabel.Text = "Descripción Auto";
+            this.autoLabel.Text = "DESCRIPCIÓN AUTO";
             // 
             // auto
             // 
@@ -423,9 +425,9 @@
             this.label15.ForeColor = System.Drawing.Color.DimGray;
             this.label15.Location = new System.Drawing.Point(3, 44);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 18);
+            this.label15.Size = new System.Drawing.Size(57, 18);
             this.label15.TabIndex = 21;
-            this.label15.Text = "Prima";
+            this.label15.Text = "PRIMA";
             // 
             // prima
             // 
@@ -449,9 +451,9 @@
             this.label11.ForeColor = System.Drawing.Color.DimGray;
             this.label11.Location = new System.Drawing.Point(3, 66);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 18);
+            this.label11.Size = new System.Drawing.Size(67, 18);
             this.label11.TabIndex = 23;
-            this.label11.Text = "Premio";
+            this.label11.Text = "PREMIO";
             // 
             // premio
             // 
@@ -475,9 +477,9 @@
             this.label12.ForeColor = System.Drawing.Color.DimGray;
             this.label12.Location = new System.Drawing.Point(3, 88);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 18);
+            this.label12.Size = new System.Drawing.Size(87, 18);
             this.label12.TabIndex = 25;
-            this.label12.Text = "6 Cuotas";
+            this.label12.Text = "6 CUOTAS";
             // 
             // cuotas
             // 
@@ -510,7 +512,7 @@
             this.tableLayoutPanel1.Controls.Add(this.auto, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 3);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 341);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 409);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -529,40 +531,17 @@
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label14.Location = new System.Drawing.Point(14, 299);
+            this.label14.Location = new System.Drawing.Point(17, 359);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(205, 24);
+            this.label14.Size = new System.Drawing.Size(125, 24);
             this.label14.TabIndex = 28;
-            this.label14.Text = "Detalle de la Cotización";
-            // 
-            // reinciar
-            // 
-            this.reinciar.Location = new System.Drawing.Point(108, 11);
-            this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reinciar.Name = "reinciar";
-            this.reinciar.Size = new System.Drawing.Size(91, 26);
-            this.reinciar.TabIndex = 30;
-            this.reinciar.Text = "Reiniciar";
-            this.reinciar.UseVisualStyleBackColor = true;
-            this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
-            // 
-            // cotizar
-            // 
-            this.cotizar.Enabled = false;
-            this.cotizar.Location = new System.Drawing.Point(14, 11);
-            this.cotizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cotizar.Name = "cotizar";
-            this.cotizar.Size = new System.Drawing.Size(91, 26);
-            this.cotizar.TabIndex = 29;
-            this.cotizar.Text = "Cotizar";
-            this.cotizar.UseVisualStyleBackColor = true;
-            this.cotizar.Click += new System.EventHandler(this.cotizar_Click);
+            this.label14.Text = "COTIZACIÓN";
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Location = new System.Drawing.Point(16, 326);
+            this.groupBox3.Location = new System.Drawing.Point(21, 394);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -570,14 +549,78 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Location = new System.Drawing.Point(21, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(144, 65);
+            this.panel1.TabIndex = 31;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(21, 206);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(144, 122);
+            this.panel2.TabIndex = 32;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Location = new System.Drawing.Point(12, 78);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(1206, 2);
+            this.groupBox5.TabIndex = 36;
+            this.groupBox5.TabStop = false;
+            // 
+            // reinciar
+            // 
+            this.reinciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reinciar.BackgroundImage")));
+            this.reinciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.reinciar.FlatAppearance.BorderSize = 0;
+            this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reinciar.ForeColor = System.Drawing.Color.Transparent;
+            this.reinciar.Location = new System.Drawing.Point(108, 11);
+            this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reinciar.Name = "reinciar";
+            this.reinciar.Size = new System.Drawing.Size(90, 60);
+            this.reinciar.TabIndex = 35;
+            this.reinciar.UseVisualStyleBackColor = true;
+            this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
+            // 
+            // cotizar
+            // 
+            this.cotizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cotizar.BackgroundImage")));
+            this.cotizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cotizar.Enabled = false;
+            this.cotizar.FlatAppearance.BorderSize = 0;
+            this.cotizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cotizar.ForeColor = System.Drawing.Color.Transparent;
+            this.cotizar.Location = new System.Drawing.Point(12, 11);
+            this.cotizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cotizar.Name = "cotizar";
+            this.cotizar.Size = new System.Drawing.Size(90, 60);
+            this.cotizar.TabIndex = 34;
+            this.cotizar.UseVisualStyleBackColor = true;
+            this.cotizar.Click += new System.EventHandler(this.cotizar_Click);
+            // 
             // CotizadorVehiculoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 472);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(1239, 555);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.reinciar);
             this.Controls.Add(this.cotizar);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox4);
@@ -648,8 +691,11 @@
         private System.Windows.Forms.Label cuotas;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button reinciar;
         private System.Windows.Forms.Button cotizar;
-        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
