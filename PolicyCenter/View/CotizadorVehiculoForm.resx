@@ -127,6 +127,16 @@
     <value>353, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="agregarPersona.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAADcSURBVDhPtdI9bgIxFEXhWUFERJmIFqVAbCZFlkIaWApR
+        lESiYBcI0lEgZTnAOYUt88aGJlzpK2b8POOf190rUyzwjS/MMcHNDLHGqWGFR1Tj5D/UJpYOGKCX2p83
+        2IZ3+sFF3HMs0ivewjsd8YIcDywWqfUBvSPH004DLtuJesJz8bxDqvtAjleVBtyzf5WTR8XzL1LdEjne
+        cxooXdvCDDk2Sa2o9QEPcYyL2CSx0D2Xy04+0YsdZpPE4miPB1Rjh9kkLjFO9J1/bk4uY5N4z16Vp+2B
+        9fb8D+m6M4L1evMVVJYeAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="buscar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

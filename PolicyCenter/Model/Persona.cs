@@ -2,6 +2,10 @@
 {
     public class Persona
     {
+        public Persona()
+        {
+            Activo = true;
+        }
         public int IdPersona { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -16,5 +20,6 @@
         public Direccion Direccion { get; set; }
         public int IdLocalidad { get; set; }
         public Localidad Localidad { get; set; }
+        public bool Activo { get; set; }
     }
 }

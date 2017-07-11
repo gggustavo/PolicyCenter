@@ -148,6 +148,12 @@ namespace View
             auto.Text = string.Empty;
         }
 
+        private void agregarPersona_Click(object sender, EventArgs e)
+        {
+            var frm = new PersonasAddForm();
+            frm.ShowDialog();
+        }
+
        
     }
 }

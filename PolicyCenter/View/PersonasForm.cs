@@ -42,7 +42,8 @@ namespace View
                 Celular = person.Celular,
                 Email = person.Email,
                 Localidad = person.Localidad.Nombre,
-                Direccion = person.Direccion.Calle + " " + person.Direccion.Numero
+                Direccion = person.Direccion.Calle + " " + person.Direccion.Numero,
+                Activo = person.Activo
             };
         }
 

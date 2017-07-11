@@ -54,6 +54,7 @@
             this.localidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.confirmar = new System.Windows.Forms.Button();
             this.cancelar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.localidadBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 392F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
@@ -84,7 +85,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.direccion, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.localidades, 1, 9);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 11);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(59, 95);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -138,7 +139,7 @@
             this.edad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.edad.Location = new System.Drawing.Point(67, 124);
             this.edad.Name = "edad";
-            this.edad.Size = new System.Drawing.Size(390, 20);
+            this.edad.Size = new System.Drawing.Size(394, 20);
             this.edad.TabIndex = 11;
             // 
             // label6
@@ -157,7 +158,7 @@
             this.cuil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cuil.Location = new System.Drawing.Point(67, 100);
             this.cuil.Name = "cuil";
-            this.cuil.Size = new System.Drawing.Size(390, 20);
+            this.cuil.Size = new System.Drawing.Size(394, 20);
             this.cuil.TabIndex = 9;
             // 
             // cuit
@@ -165,7 +166,7 @@
             this.cuit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cuit.Location = new System.Drawing.Point(67, 76);
             this.cuit.Name = "cuit";
-            this.cuit.Size = new System.Drawing.Size(390, 20);
+            this.cuit.Size = new System.Drawing.Size(394, 20);
             this.cuit.TabIndex = 8;
             // 
             // label3
@@ -184,7 +185,7 @@
             this.nombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nombre.Location = new System.Drawing.Point(67, 4);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(390, 20);
+            this.nombre.Size = new System.Drawing.Size(394, 20);
             this.nombre.TabIndex = 0;
             // 
             // apellido
@@ -192,7 +193,7 @@
             this.apellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.apellido.Location = new System.Drawing.Point(67, 28);
             this.apellido.Name = "apellido";
-            this.apellido.Size = new System.Drawing.Size(390, 20);
+            this.apellido.Size = new System.Drawing.Size(394, 20);
             this.apellido.TabIndex = 1;
             // 
             // label1
@@ -222,7 +223,7 @@
             this.dni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dni.Location = new System.Drawing.Point(67, 52);
             this.dni.Name = "dni";
-            this.dni.Size = new System.Drawing.Size(390, 20);
+            this.dni.Size = new System.Drawing.Size(394, 20);
             this.dni.TabIndex = 5;
             // 
             // label4
@@ -252,7 +253,7 @@
             this.email.Dock = System.Windows.Forms.DockStyle.Fill;
             this.email.Location = new System.Drawing.Point(67, 148);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(390, 20);
+            this.email.Size = new System.Drawing.Size(394, 20);
             this.email.TabIndex = 13;
             // 
             // Celular
@@ -260,7 +261,7 @@
             this.Celular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Celular.Location = new System.Drawing.Point(67, 172);
             this.Celular.Name = "Celular";
-            this.Celular.Size = new System.Drawing.Size(390, 20);
+            this.Celular.Size = new System.Drawing.Size(394, 20);
             this.Celular.TabIndex = 15;
             // 
             // label9
@@ -279,7 +280,7 @@
             this.direccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.direccion.Location = new System.Drawing.Point(67, 196);
             this.direccion.Name = "direccion";
-            this.direccion.Size = new System.Drawing.Size(390, 20);
+            this.direccion.Size = new System.Drawing.Size(394, 20);
             this.direccion.TabIndex = 17;
             // 
             // localidades
@@ -290,7 +291,7 @@
             this.localidades.FormattingEnabled = true;
             this.localidades.Location = new System.Drawing.Point(67, 220);
             this.localidades.Name = "localidades";
-            this.localidades.Size = new System.Drawing.Size(390, 20);
+            this.localidades.Size = new System.Drawing.Size(394, 20);
             this.localidades.TabIndex = 19;
             this.localidades.ValueMember = "IdLocalidad";
             // 
@@ -305,7 +306,7 @@
             this.confirmar.FlatAppearance.BorderSize = 0;
             this.confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmar.ForeColor = System.Drawing.Color.Transparent;
-            this.confirmar.Location = new System.Drawing.Point(136, 276);
+            this.confirmar.Location = new System.Drawing.Point(186, 369);
             this.confirmar.Name = "confirmar";
             this.confirmar.Size = new System.Drawing.Size(95, 48);
             this.confirmar.TabIndex = 1;
@@ -319,19 +320,29 @@
             this.cancelar.FlatAppearance.BorderSize = 0;
             this.cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.cancelar.Location = new System.Drawing.Point(248, 275);
+            this.cancelar.Location = new System.Drawing.Point(298, 368);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(95, 48);
             this.cancelar.TabIndex = 2;
             this.cancelar.UseVisualStyleBackColor = true;
             this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(236, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(123, 77);
+            this.panel1.TabIndex = 3;
+            // 
             // PersonasAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(487, 336);
+            this.ClientSize = new System.Drawing.Size(591, 445);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.confirmar);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -373,5 +384,6 @@
         private System.Windows.Forms.BindingSource localidadBindingSource;
         private System.Windows.Forms.Button confirmar;
         private System.Windows.Forms.Button cancelar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

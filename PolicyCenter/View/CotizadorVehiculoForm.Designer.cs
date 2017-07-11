@@ -76,6 +76,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.reinciar = new System.Windows.Forms.Button();
             this.cotizar = new System.Windows.Forms.Button();
+            this.agregarPersona = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.versionBindingSource)).BeginInit();
@@ -186,6 +187,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.agregarPersona);
             this.groupBox2.Controls.Add(this.localidadPersona);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.celularPersona);
@@ -610,6 +612,18 @@
             this.cotizar.UseVisualStyleBackColor = true;
             this.cotizar.Click += new System.EventHandler(this.cotizar_Click);
             // 
+            // agregarPersona
+            // 
+            this.agregarPersona.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregarPersona.BackgroundImage")));
+            this.agregarPersona.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.agregarPersona.Location = new System.Drawing.Point(669, 26);
+            this.agregarPersona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agregarPersona.Name = "agregarPersona";
+            this.agregarPersona.Size = new System.Drawing.Size(20, 20);
+            this.agregarPersona.TabIndex = 13;
+            this.agregarPersona.UseVisualStyleBackColor = true;
+            this.agregarPersona.Click += new System.EventHandler(this.agregarPersona_Click);
+            // 
             // CotizadorVehiculoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -697,5 +711,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button reinciar;
         private System.Windows.Forms.Button cotizar;
+        private System.Windows.Forms.Button agregarPersona;
     }
 }

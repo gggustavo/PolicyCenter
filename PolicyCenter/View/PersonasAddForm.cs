@@ -27,6 +27,16 @@ namespace View
 
         private void confirmar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(nombre.Text)) { MessageBox.Show("Ingrese un nombre"); return; }
+            if (string.IsNullOrEmpty(apellido.Text)) { MessageBox.Show("Ingrese un apellido"); return; }
+            if (string.IsNullOrEmpty(dni.Text)) { MessageBox.Show("Ingrese un dni"); return; }
+            if (string.IsNullOrEmpty(edad.Text)) { MessageBox.Show("Ingrese una edad"); return; }
+            if (string.IsNullOrEmpty(email.Text)) { MessageBox.Show("Ingrese un email"); return; }
+            if (string.IsNullOrEmpty(Celular.Text)) { MessageBox.Show("Ingrese un celular"); return; }
+            if (string.IsNullOrEmpty(direccion.Text)) { MessageBox.Show("Ingrese una direccion"); return; }
+            if (localidadBindingSource.Current == null) {  MessageBox.Show("Seleccione una localidad"); return; }
+
+
             var persona = new Model.Persona();
 
             persona.Nombre = nombre.Text;

@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonasForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reinciar = new System.Windows.Forms.Button();
+            this.agregar = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.borrar = new System.Windows.Forms.Button();
             this.idPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +49,7 @@
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idLocalidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reinciar = new System.Windows.Forms.Button();
-            this.agregar = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.borrar = new System.Windows.Forms.Button();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,20 +75,82 @@
             this.idDireccionDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.idLocalidadDataGridViewTextBoxColumn,
-            this.localidadDataGridViewTextBoxColumn});
+            this.localidadDataGridViewTextBoxColumn,
+            this.activoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.personaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1126, 240);
             this.dataGridView1.TabIndex = 0;
             // 
+            // personaBindingSource
+            // 
+            this.personaBindingSource.DataSource = typeof(Model.Persona);
+            // 
+            // reinciar
+            // 
+            this.reinciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reinciar.BackgroundImage")));
+            this.reinciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.reinciar.FlatAppearance.BorderSize = 0;
+            this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reinciar.ForeColor = System.Drawing.Color.Transparent;
+            this.reinciar.Location = new System.Drawing.Point(204, 11);
+            this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reinciar.Name = "reinciar";
+            this.reinciar.Size = new System.Drawing.Size(90, 60);
+            this.reinciar.TabIndex = 36;
+            this.reinciar.UseVisualStyleBackColor = true;
+            this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
+            // 
+            // agregar
+            // 
+            this.agregar.BackColor = System.Drawing.SystemColors.Control;
+            this.agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregar.BackgroundImage")));
+            this.agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.agregar.FlatAppearance.BorderSize = 0;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.ForeColor = System.Drawing.Color.Transparent;
+            this.agregar.Location = new System.Drawing.Point(12, 11);
+            this.agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agregar.Name = "agregar";
+            this.agregar.Size = new System.Drawing.Size(90, 60);
+            this.agregar.TabIndex = 37;
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Location = new System.Drawing.Point(-40, 82);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(1206, 2);
+            this.groupBox5.TabIndex = 38;
+            this.groupBox5.TabStop = false;
+            // 
+            // borrar
+            // 
+            this.borrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("borrar.BackgroundImage")));
+            this.borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.borrar.FlatAppearance.BorderSize = 0;
+            this.borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.borrar.ForeColor = System.Drawing.Color.Transparent;
+            this.borrar.Location = new System.Drawing.Point(108, 11);
+            this.borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.borrar.Name = "borrar";
+            this.borrar.Size = new System.Drawing.Size(90, 60);
+            this.borrar.TabIndex = 39;
+            this.borrar.UseVisualStyleBackColor = true;
+            this.borrar.Click += new System.EventHandler(this.borrar_Click);
+            // 
             // idPersonaDataGridViewTextBoxColumn
             // 
             this.idPersonaDataGridViewTextBoxColumn.DataPropertyName = "IdPersona";
-            this.idPersonaDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idPersonaDataGridViewTextBoxColumn.HeaderText = "IdPersona";
             this.idPersonaDataGridViewTextBoxColumn.Name = "idPersonaDataGridViewTextBoxColumn";
             this.idPersonaDataGridViewTextBoxColumn.Visible = false;
-            this.idPersonaDataGridViewTextBoxColumn.Width = 80;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -163,67 +226,11 @@
             this.localidadDataGridViewTextBoxColumn.HeaderText = "Localidad";
             this.localidadDataGridViewTextBoxColumn.Name = "localidadDataGridViewTextBoxColumn";
             // 
-            // personaBindingSource
+            // activoDataGridViewCheckBoxColumn
             // 
-            this.personaBindingSource.DataSource = typeof(Model.Persona);
-            // 
-            // reinciar
-            // 
-            this.reinciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reinciar.BackgroundImage")));
-            this.reinciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.reinciar.FlatAppearance.BorderSize = 0;
-            this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reinciar.ForeColor = System.Drawing.Color.Transparent;
-            this.reinciar.Location = new System.Drawing.Point(204, 11);
-            this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reinciar.Name = "reinciar";
-            this.reinciar.Size = new System.Drawing.Size(90, 60);
-            this.reinciar.TabIndex = 36;
-            this.reinciar.UseVisualStyleBackColor = true;
-            this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
-            // 
-            // agregar
-            // 
-            this.agregar.BackColor = System.Drawing.SystemColors.Control;
-            this.agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregar.BackgroundImage")));
-            this.agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.agregar.FlatAppearance.BorderSize = 0;
-            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.ForeColor = System.Drawing.Color.Transparent;
-            this.agregar.Location = new System.Drawing.Point(12, 11);
-            this.agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.agregar.Name = "agregar";
-            this.agregar.Size = new System.Drawing.Size(90, 60);
-            this.agregar.TabIndex = 37;
-            this.agregar.UseVisualStyleBackColor = false;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Location = new System.Drawing.Point(-40, 82);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(1206, 2);
-            this.groupBox5.TabIndex = 38;
-            this.groupBox5.TabStop = false;
-            // 
-            // borrar
-            // 
-            this.borrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("borrar.BackgroundImage")));
-            this.borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.borrar.FlatAppearance.BorderSize = 0;
-            this.borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.borrar.ForeColor = System.Drawing.Color.Transparent;
-            this.borrar.Location = new System.Drawing.Point(108, 11);
-            this.borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.borrar.Name = "borrar";
-            this.borrar.Size = new System.Drawing.Size(90, 60);
-            this.borrar.TabIndex = 39;
-            this.borrar.UseVisualStyleBackColor = true;
-            this.borrar.Click += new System.EventHandler(this.borrar_Click);
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
             // 
             // PersonasForm
             // 
@@ -255,6 +262,7 @@
         private System.Windows.Forms.Button reinciar;
         private System.Windows.Forms.Button agregar;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button borrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
@@ -268,6 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idLocalidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn localidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button borrar;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
     }
 }

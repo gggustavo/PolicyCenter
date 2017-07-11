@@ -751,7 +751,7 @@ namespace Model
                 Edad = 49,
                 Celular = "3415332233",
                 Localidad = context.Localidad.FirstOrDefault(),
-                Cuil = "20-23456456-9"
+                Cuil = "20-23456456-9",                
             };
 
             context.Persona.Add(persona);

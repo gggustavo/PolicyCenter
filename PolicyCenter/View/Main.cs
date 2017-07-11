@@ -15,8 +15,7 @@ namespace View
     {
         public Main()
         {
-            InitializeComponent();
-            Controller.Test.Initialize();
+            InitializeComponent();            
 
             MdiClient ctlMDI;
             foreach (Control ctl in this.Controls)
