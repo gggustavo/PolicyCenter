@@ -2,4 +2,4 @@
 
 This app called PolicyCenter, intend  combining the management of an insurance policy.
 
-[![EntityDesignerDiagram.jpg](https://s4.postimg.org/jcz8phycd/Entity_Designer_Diagram.jpg)](https://postimg.org/image/dosxyltzt/)
+[![pic1.png](https://s23.postimg.org/ui4m0c5yz/pic1.png)](https://postimg.org/image/mpdy8czzr/)
