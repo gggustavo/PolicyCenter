@@ -8,21 +8,17 @@ namespace Rule
 {
     public class UbicacionRiesgo
     {
-        private Dictionary<string, decimal> _listRiegos;
+        private List<Entidades.UbicacionRiesgo> _listRiegos;
 
         public UbicacionRiesgo()
         {
-            _listRiegos = new Dictionary<string, decimal>();
-            _listRiegos.Add("BuenosAires", Convert.ToDecimal(0.005));
-            _listRiegos.Add("Rosario", Convert.ToDecimal(0.002));
-            _listRiegos.Add("Funes", Convert.ToDecimal(0.0015));
-            _listRiegos.Add("Casilda", Convert.ToDecimal(0.009));
+            _listRiegos = Context.GetInstance().UbicacionRiesgo.ToList();
         }
 
         public decimal RiesgoUbicacion(string localidad)
         {
-            var value = _listRiegos.FirstOrDefault(_ => _.Key.ToUpper() == localidad.ToUpper());
-            return value.Value;
+            var value = _listRiegos.FirstOrDefault(_ => _.Ciudad.ToUpper() == localidad.ToUpper());
+            return value.Valor;
         }
 
     }
