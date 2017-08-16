@@ -168,7 +168,8 @@ namespace Rule
         {
             var ubicacionRiesgo = new Entidades.UbicacionRiesgo
             {
-                Ciudad = "BuenosAires",
+                Ciudad = "Capital Federal",
+                CodigoPostal = 1000,
                 Valor = Convert.ToDecimal(0.005)
             };
 
@@ -178,6 +179,7 @@ namespace Rule
             ubicacionRiesgo = new Entidades.UbicacionRiesgo
             {
                 Ciudad = "Rosario",
+                CodigoPostal = 2000,
                 Valor = Convert.ToDecimal(0.002)
             };
 
@@ -186,6 +188,7 @@ namespace Rule
 
             ubicacionRiesgo = new Entidades.UbicacionRiesgo
             {
+                CodigoPostal = 2000,
                 Ciudad = "Funes",
                 Valor = Convert.ToDecimal(0.0015)
             };
@@ -195,6 +198,7 @@ namespace Rule
 
             ubicacionRiesgo = new Entidades.UbicacionRiesgo
             {
+                CodigoPostal = 2170,
                 Ciudad = "Casilda",
                 Valor = Convert.ToDecimal(0.009)
             };

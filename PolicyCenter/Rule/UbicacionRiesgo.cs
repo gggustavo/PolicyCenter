@@ -15,9 +15,9 @@ namespace Rule
             _listRiegos = Context.GetInstance().UbicacionRiesgo.ToList();
         }
 
-        public decimal RiesgoUbicacion(string localidad)
+        public decimal RiesgoUbicacion(int codigoPostal)
         {
-            var value = _listRiegos.FirstOrDefault(_ => _.Ciudad.ToUpper() == localidad.ToUpper());
+            var value = _listRiegos.FirstOrDefault(_ => _.CodigoPostal == codigoPostal);
             return value.Valor;
         }
 

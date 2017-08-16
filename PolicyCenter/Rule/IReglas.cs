@@ -8,7 +8,7 @@ namespace Rule
 {
     public interface IReglas
     {
-        decimal riesgoUbicacion(string ubicacion);
+        decimal riesgoUbicacion(int codigoPostal);
         decimal riesgoAntiguedad(int anio);
     }
 }

@@ -126,6 +126,18 @@
     <Compile Include="RamosForm.Designer.cs">
       <DependentUpon>RamosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rule\AntiguedadRiesgoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rule\AntiguedadRiesgoForm.Designer.cs">
+      <DependentUpon>AntiguedadRiesgoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rule\UbicacionRiesgoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rule\UbicacionRiesgoForm.Designer.cs">
+      <DependentUpon>UbicacionRiesgoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehiculosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +187,12 @@
     <EmbeddedResource Include="RamosForm.resx">
       <DependentUpon>RamosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Rule\AntiguedadRiesgoForm.resx">
+      <DependentUpon>AntiguedadRiesgoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rule\UbicacionRiesgoForm.resx">
+      <DependentUpon>UbicacionRiesgoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VehiculosForm.resx">
       <DependentUpon>VehiculosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +207,8 @@
     <None Include="Properties\DataSources\Model.Ramo.datasource" />
     <None Include="Properties\DataSources\Model.Vehiculo.datasource" />
     <None Include="Properties\DataSources\Model.Version.datasource" />
+    <None Include="Properties\DataSources\Rule.Entidades.AntiguedadRiesgo.datasource" />
+    <None Include="Properties\DataSources\Rule.Entidades.UbicacionRiesgo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

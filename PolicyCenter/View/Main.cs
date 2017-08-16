@@ -104,6 +104,16 @@ namespace View
         {
             Close();
         }
+
+        private void ubicacionRiesgoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new Rule.UbicacionRiesgoForm());
+        }
+
+        private void antiguedadRiesgoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new Rule.AntiguedadRiesgoForm());
+        }
  
     }
 }

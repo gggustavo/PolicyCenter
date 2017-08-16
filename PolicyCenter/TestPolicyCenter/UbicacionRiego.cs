@@ -46,7 +46,7 @@ namespace TestPolicyCenter
             var poliza = new Poliza
             {
                 IdPersona = 1,
-                Persona = new Persona { Localidad = new Localidad { CodPostal = 2000, Nombre = "BuenosAires" } },
+                Persona = new Persona { Localidad = new Localidad { CodPostal = 1000, Nombre = "BuenosAires" } },
                 IdProductor = 1,
                 IdBien = 1,
                 Bien = new Vehiculo

@@ -8,9 +8,9 @@ namespace Rule
 {
     public class ReglasBase : IReglas
     {
-        public decimal riesgoUbicacion(string ubicacion)
+        public decimal riesgoUbicacion(int codigoPostal)
         {
-            return new UbicacionRiesgo().RiesgoUbicacion(ubicacion);            
+            return new UbicacionRiesgo().RiesgoUbicacion(codigoPostal);            
         }
 
         public decimal riesgoAntiguedad(int anio)

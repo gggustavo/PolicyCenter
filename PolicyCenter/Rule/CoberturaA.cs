@@ -21,7 +21,7 @@ namespace Rule
         public override decimal CalcularPrima()
         {
             var antiguedad = _reglas.riesgoAntiguedad(_calculo.Anio);
-            var riesgo = _reglas.riesgoUbicacion(_calculo.RiesgoUbicacion);
+            var riesgo = _reglas.riesgoUbicacion(_calculo.CodigoPostalRiesgo);
 
             return (_calculo.Precio * PrecioBase) + (_calculo.Precio * riesgo) + (_calculo.Precio * antiguedad);     
         }
