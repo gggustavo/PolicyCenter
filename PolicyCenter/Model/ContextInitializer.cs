@@ -1041,9 +1041,10 @@ namespace Model
                 IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
                 IdVersion = context.Version.Where(_ => _.IdVersion == 41).FirstOrDefault().IdVersion, // Trendline Manual MY16
                 IdModelo = 10,  // Golf 1.6
-                Precio = 350000M,
+                Precio = 399000M,
                 Anio = 2017,
-                IdRamo = 1
+                IdRamo = 1,
+                Activo = true
             };
             context.Bien.Add(vehiculo);
 

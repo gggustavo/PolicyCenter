@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehiculosForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +43,18 @@
             this.anioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agregar = new System.Windows.Forms.Button();
+            this.borrar = new System.Windows.Forms.Button();
+            this.reinciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -64,10 +71,9 @@
             this.anioDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.vehiculoBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1116, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(1116, 249);
             this.dataGridView1.TabIndex = 0;
             // 
             // idMarcaDataGridViewTextBoxColumn
@@ -148,16 +154,66 @@
             // 
             this.vehiculoBindingSource.DataSource = typeof(Model.Vehiculo);
             // 
+            // agregar
+            // 
+            this.agregar.BackColor = System.Drawing.SystemColors.Control;
+            this.agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregar.BackgroundImage")));
+            this.agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.agregar.FlatAppearance.BorderSize = 0;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.ForeColor = System.Drawing.Color.Transparent;
+            this.agregar.Location = new System.Drawing.Point(4, 6);
+            this.agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agregar.Name = "agregar";
+            this.agregar.Size = new System.Drawing.Size(90, 60);
+            this.agregar.TabIndex = 38;
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
+            // borrar
+            // 
+            this.borrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("borrar.BackgroundImage")));
+            this.borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.borrar.FlatAppearance.BorderSize = 0;
+            this.borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.borrar.ForeColor = System.Drawing.Color.Transparent;
+            this.borrar.Location = new System.Drawing.Point(100, 6);
+            this.borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.borrar.Name = "borrar";
+            this.borrar.Size = new System.Drawing.Size(90, 60);
+            this.borrar.TabIndex = 41;
+            this.borrar.UseVisualStyleBackColor = true;
+            this.borrar.Click += new System.EventHandler(this.borrar_Click);
+            // 
+            // reinciar
+            // 
+            this.reinciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reinciar.BackgroundImage")));
+            this.reinciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.reinciar.FlatAppearance.BorderSize = 0;
+            this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reinciar.ForeColor = System.Drawing.Color.Transparent;
+            this.reinciar.Location = new System.Drawing.Point(196, 6);
+            this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reinciar.Name = "reinciar";
+            this.reinciar.Size = new System.Drawing.Size(90, 60);
+            this.reinciar.TabIndex = 40;
+            this.reinciar.UseVisualStyleBackColor = true;
+            this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
+            // 
             // VehiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 320);
+            this.Controls.Add(this.borrar);
+            this.Controls.Add(this.reinciar);
+            this.Controls.Add(this.agregar);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "VehiculosForm";
             this.Text = "Vehiculos";
+            this.Load += new System.EventHandler(this.VehiculosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -179,5 +235,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ramoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button agregar;
+        private System.Windows.Forms.Button borrar;
+        private System.Windows.Forms.Button reinciar;
     }
 }

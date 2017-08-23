@@ -100,6 +100,12 @@
     <Compile Include="OrganizadoresForm.Designer.cs">
       <DependentUpon>OrganizadoresForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehiculoAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiculoAddForm.Designer.cs">
+      <DependentUpon>VehiculoAddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonasAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrganizadoresForm.resx">
       <DependentUpon>OrganizadoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiculoAddForm.resx">
+      <DependentUpon>VehiculoAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonasAddForm.resx">
       <DependentUpon>PersonasAddForm.cs</DependentUpon>

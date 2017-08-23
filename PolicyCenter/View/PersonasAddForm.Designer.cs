@@ -64,7 +64,7 @@
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 401F));
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
@@ -139,7 +139,7 @@
             this.edad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.edad.Location = new System.Drawing.Point(67, 124);
             this.edad.Name = "edad";
-            this.edad.Size = new System.Drawing.Size(394, 20);
+            this.edad.Size = new System.Drawing.Size(395, 20);
             this.edad.TabIndex = 11;
             // 
             // label6
@@ -158,7 +158,7 @@
             this.cuil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cuil.Location = new System.Drawing.Point(67, 100);
             this.cuil.Name = "cuil";
-            this.cuil.Size = new System.Drawing.Size(394, 20);
+            this.cuil.Size = new System.Drawing.Size(395, 20);
             this.cuil.TabIndex = 9;
             // 
             // cuit
@@ -166,7 +166,7 @@
             this.cuit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cuit.Location = new System.Drawing.Point(67, 76);
             this.cuit.Name = "cuit";
-            this.cuit.Size = new System.Drawing.Size(394, 20);
+            this.cuit.Size = new System.Drawing.Size(395, 20);
             this.cuit.TabIndex = 8;
             // 
             // label3
@@ -185,7 +185,7 @@
             this.nombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nombre.Location = new System.Drawing.Point(67, 4);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(394, 20);
+            this.nombre.Size = new System.Drawing.Size(395, 20);
             this.nombre.TabIndex = 0;
             // 
             // apellido
@@ -193,7 +193,7 @@
             this.apellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.apellido.Location = new System.Drawing.Point(67, 28);
             this.apellido.Name = "apellido";
-            this.apellido.Size = new System.Drawing.Size(394, 20);
+            this.apellido.Size = new System.Drawing.Size(395, 20);
             this.apellido.TabIndex = 1;
             // 
             // label1
@@ -223,7 +223,7 @@
             this.dni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dni.Location = new System.Drawing.Point(67, 52);
             this.dni.Name = "dni";
-            this.dni.Size = new System.Drawing.Size(394, 20);
+            this.dni.Size = new System.Drawing.Size(395, 20);
             this.dni.TabIndex = 5;
             // 
             // label4
@@ -253,7 +253,7 @@
             this.email.Dock = System.Windows.Forms.DockStyle.Fill;
             this.email.Location = new System.Drawing.Point(67, 148);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(394, 20);
+            this.email.Size = new System.Drawing.Size(395, 20);
             this.email.TabIndex = 13;
             // 
             // Celular
@@ -261,7 +261,7 @@
             this.Celular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Celular.Location = new System.Drawing.Point(67, 172);
             this.Celular.Name = "Celular";
-            this.Celular.Size = new System.Drawing.Size(394, 20);
+            this.Celular.Size = new System.Drawing.Size(395, 20);
             this.Celular.TabIndex = 15;
             // 
             // label9
@@ -280,7 +280,7 @@
             this.direccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.direccion.Location = new System.Drawing.Point(67, 196);
             this.direccion.Name = "direccion";
-            this.direccion.Size = new System.Drawing.Size(394, 20);
+            this.direccion.Size = new System.Drawing.Size(395, 20);
             this.direccion.TabIndex = 17;
             // 
             // localidades
@@ -291,7 +291,7 @@
             this.localidades.FormattingEnabled = true;
             this.localidades.Location = new System.Drawing.Point(67, 220);
             this.localidades.Name = "localidades";
-            this.localidades.Size = new System.Drawing.Size(394, 20);
+            this.localidades.Size = new System.Drawing.Size(395, 20);
             this.localidades.TabIndex = 19;
             this.localidades.ValueMember = "IdLocalidad";
             // 

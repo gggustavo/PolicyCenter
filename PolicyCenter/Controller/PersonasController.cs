@@ -27,7 +27,7 @@ namespace Controller
             var context = Model.Context.GetInstance();
             var person = context.Persona.Find(idPersona);
             person.Activo = false;
-            context.Entry(person).State = System.Data.Entity.EntityState.Modified;            
+            context.Entry(person).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
         }
     }

@@ -8,5 +8,7 @@
 
         public int Anio { get; set; }
         public decimal Precio { get; set; }
+
+        public bool Activo { get; set; }
     }
 }
