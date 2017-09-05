@@ -11,7 +11,8 @@ namespace Controller
         public IList<Model.Vehiculo> ObtenerVehiculos()
         {
             var context = Model.Context.GetInstance();
-            return context.Vehiculo.Include("Marca").Include("Modelo").Include("Version").Include("Ramo").ToList();
+            return context.Vehiculo.Include("Marca").Include("Modelo").Include("Version").Include("Ramo")
+                .Where(_ => _.Activo).ToList();
         }
 
         public void Eliminar(int idBien)

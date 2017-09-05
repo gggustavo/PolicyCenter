@@ -49,6 +49,7 @@ namespace View
             var idBien = current.IdBien;
 
             vehiculosController.Eliminar(idBien);
+            GetData();
         }
 
         private void reinciar_Click(object sender, EventArgs e)
@@ -58,7 +59,9 @@ namespace View
 
         private void agregar_Click(object sender, EventArgs e)
         {
-
+            var frm = new VehiculoAddForm();
+            frm.ShowDialog();
+            GetData();
         }
     }
 }
