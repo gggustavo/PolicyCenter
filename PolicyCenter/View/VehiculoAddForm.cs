@@ -37,7 +37,6 @@ namespace View
 
         private void confirmar_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrEmpty(precio.Text)) { MessageBox.Show("Ingrese un precio"); return; }
             if (string.IsNullOrEmpty(anio.Text)) { MessageBox.Show("Ingrese un año"); return; }
 
@@ -66,6 +65,29 @@ namespace View
             Close();
         }
 
+
+        private void marcas_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var idMarca = ((Model.Marca)(((ComboBox)(sender)).SelectedItem)).IdMarca;
+            var result = modelosController.ObtenerModelos().Where(_ => _.IdMarca == idMarca);
+            modeloBindingSource.DataSource = result;
+            if (!result.Any()) modeloBindingSource.DataSource = null;
+            modelos.SelectedIndex = -1;
+            versionBindingSource.DataSource = null;
+            versiones.SelectedIndex = -1;
+        }
+
+
+        private void modelos_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var idModelo = ((Model.Modelo)(((ComboBox)(sender)).SelectedItem)).IdModelo;
+            versionBindingSource.DataSource = versionController.ObtenerVersiones().Where(s => s.Models.Any(_ => _.IdModelo == idModelo));
+            versiones.SelectedIndex = -1;
+        }
+
+
+
+      
         
 
         

@@ -10,6 +10,7 @@ namespace Model
         {
             CargarMarcas(context);
             CargarModeloVw(context);
+            CargarModeloCitroen(context);
             CargarLocalidades(context);
             CargarPersona(context);
             CargarOrganizadorProductor(context);
@@ -649,6 +650,187 @@ namespace Model
 
             modelos.Clear();
             
+        }
+
+        private static void CargarModeloCitroen(PolicyCenterContext context)
+        {
+            var modelos = new List<Modelo>();
+
+            var versions = new List<Version>
+            {
+                new Version {Nombre = "Live VTi"},
+                new Version {Nombre = "Feel VTi"},
+                new Version {Nombre = "Feel VTi Aut"},
+                new Version {Nombre = "Shine VTi"},
+                new Version {Nombre = "Shine VTi Aut"}
+            };
+
+
+            var modelo = new Modelo
+            {
+                Nombre = "C3",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos = new List<Modelo>();
+
+            versions = new List<Version>
+            {
+                new Version {Nombre = "VTi 115 Live"},
+                new Version {Nombre = "VTi 115 Feel"},
+                new Version {Nombre = "VTi 92 Feel HDi"},
+                new Version {Nombre = "VTi 115 Shine Aut"}                
+            };
+
+
+            modelo = new Modelo
+            {
+                Nombre = "C-Elysée",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos = new List<Modelo>();
+
+            versions = new List<Version>
+            {
+                new Version {Nombre = "Feel VTi"},
+                new Version {Nombre = "Feel VTi Aut"},
+                new Version {Nombre = "Shine VTi"},
+                new Version {Nombre = "Shine VTi Aut"},
+            };
+
+
+            modelo = new Modelo
+            {
+                Nombre = "C3 Aircross",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+
+            modelos = new List<Modelo>();
+
+            versions = new List<Version>
+            {
+                new Version {Nombre = "Shine Aut"}
+            };
+
+            modelo = new Modelo
+            {
+                Nombre = "C4 Cactus",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos = new List<Modelo>();
+
+            versions = new List<Version>
+            {
+                new Version {Nombre = "1.6 Feel"},
+                new Version {Nombre = "1.6 Feel Aut"},
+                new Version {Nombre = "1.6 HDi Feel Pack"},
+                new Version {Nombre = "1.6 HDi Pack"},
+                new Version {Nombre = "1.6 HDi Feel Pack 10 años"},
+                new Version {Nombre = "1.6 Feel Pack 10 años"},
+                new Version {Nombre = "1.6 Shine Aut"}
+            };
+
+            modelo = new Modelo
+            {
+                Nombre = "C4 Lounge",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos = new List<Modelo>();
+
+            versions = new List<Version>
+            {
+                new Version {Nombre = "1.6 HDi Feel"},
+                new Version {Nombre = "1.6 HDi Feel Aut"},
+                new Version {Nombre = "1.6 HDi Feel Pack"},
+                new Version {Nombre = "1.6 HDi Feel Pack Aut"}
+            };
+
+            modelo = new Modelo
+            {
+                Nombre = "C4 Picasso",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos = new List<Modelo>();
+
+            versions = new List<Version>
+            {
+                new Version {Nombre = "1.6 Feel Pack Aut"},
+                new Version {Nombre = "1.6 HDi Shine"},
+                new Version {Nombre = "1.6 Shine Aut"}
+            };
+
+            modelo = new Modelo
+            {
+                Nombre = "C4 Grand Picasso",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
+
+            modelos = new List<Modelo>();
+
+            versions = new List<Version>
+            {
+                new Version {Nombre = "1.6 XTR"},
+                new Version {Nombre = "1.6 HDi XTR"},
+            };
+
+            modelo = new Modelo
+            {
+                Nombre = "Berlingo Multispace",
+                IdMarca = 4,
+                Versions = versions
+            };
+
+            modelos.Add(modelo);
+
+            context.Modelo.AddRange(modelos);
+            context.SaveChanges();
         }
 
         private static void CargarMarcas(PolicyCenterContext context)
