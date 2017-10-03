@@ -28,8 +28,8 @@ namespace Model
 
             var versions = new List<Version>
             {
-                new Version {Nombre = "Starline 4X2 MY16"},
-                new Version {Nombre = "Starline 4X4 MY16"}
+                new Version {Nombre = "Starline 4X2"},
+                new Version {Nombre = "Starline 4X4"}
             };
 
 
@@ -44,24 +44,24 @@ namespace Model
 
             versions = new List<Version>
             {
-                new Version {Nombre = "Black Package 4X4 AUT MY16"},
-                new Version {Nombre = "Black Package 4X4 MY16"},
-                new Version {Nombre = "Dark Label 4x2 AUT MY16"},
-                new Version {Nombre = "Dark Label 4x2 MY16"},
-                new Version {Nombre = "Dark Label 4x4 AUT MY16"},
-                new Version {Nombre = "Dark Label 4x4 MY16"},
-                new Version {Nombre = "Highline Pack 4x2 AUT MY16"},
-                new Version {Nombre = "Highline Pack 4x2 MY16"},
-                new Version {Nombre = "Highline Pack 4x4 AUT MY16"},
-                new Version {Nombre = "Highline Pack 4x4 MY16"},
-                new Version {Nombre = "Trendline Pack 4x2 AUT MY16"},
-                new Version {Nombre = "Trendline Pack 4x2 MY16"},
-                new Version {Nombre = "Trendline Pack 4x4 AUT MY16"},
-                new Version {Nombre = "Trendline Pack 4x4 MY16"},
-                new Version {Nombre = "Ultimate 4x2 AUT MY16"},
-                new Version {Nombre = "Ultimate 4x2 MY16"},
-                new Version {Nombre = "Ultimate 4x4 AUT MY16"},
-                new Version {Nombre = "Ultimate 4x4 MY16"}
+                new Version {Nombre = "Black Package 4X4 AUT"},
+                new Version {Nombre = "Black Package 4X4"},
+                new Version {Nombre = "Dark Label 4x2 AUT"},
+                new Version {Nombre = "Dark Label 4x2"},
+                new Version {Nombre = "Dark Label 4x4 AUT"},
+                new Version {Nombre = "Dark Label 4x4"},
+                new Version {Nombre = "Highline Pack 4x2 AUT"},
+                new Version {Nombre = "Highline Pack 4x2"},
+                new Version {Nombre = "Highline Pack 4x4 AUT"},
+                new Version {Nombre = "Highline Pack 4x4"},
+                new Version {Nombre = "Trendline Pack 4x2 AUT"},
+                new Version {Nombre = "Trendline Pack 4x2"},
+                new Version {Nombre = "Trendline Pack 4x4 AUT"},
+                new Version {Nombre = "Trendline Pack 4x4"},
+                new Version {Nombre = "Ultimate 4x2 AUT"},
+                new Version {Nombre = "Ultimate 4x2"},
+                new Version {Nombre = "Ultimate 4x4 AUT"},
+                new Version {Nombre = "Ultimate 4x4"}
             };
 
             modelo = new Modelo
@@ -114,7 +114,7 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "Higline manual MY16"},
+                new Version {Nombre = "Higline manual"},
                 new Version {Nombre = "Higline manual MY17"}
             };
 
@@ -199,9 +199,9 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "Comfortline DSG MY16"},
-                new Version {Nombre = "Comfortline manual DSG MY16"},
-                new Version {Nombre = "Highline DSG MY16"}
+                new Version {Nombre = "Comfortline DSG"},
+                new Version {Nombre = "Comfortline manual DSG"},
+                new Version {Nombre = "Highline DSG"}
             };
 
 
@@ -217,7 +217,7 @@ namespace Model
             context.SaveChanges();
 
             modelos.Clear();
-            versions = new List<Version> {new Version {Nombre = "Trendline Manual MY16"}};
+            versions = new List<Version> {new Version {Nombre = "Trendline Manual"}};
 
 
             modelo = new Modelo
@@ -276,7 +276,7 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "Trendline Aut. MY16"},
+                new Version {Nombre = "Trendline Aut."},
                 context.Version.SingleOrDefault(_ => _.IdVersion == 41)
             };
 
@@ -419,8 +419,8 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "Design DSG MY16"},
-                new Version {Nombre = "Design Manual DSG MY16"}
+                new Version {Nombre = "Design DSG"},
+                new Version {Nombre = "Design Manual DSG"}
             };
 
 
@@ -438,8 +438,8 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "Sport DSG MY16"},
-                new Version {Nombre = "Sport Manual DSG MY16"}
+                new Version {Nombre = "Sport DSG"},
+                new Version {Nombre = "Sport Manual DSG"}
             };
 
 
@@ -555,8 +555,8 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "Advance Manual + Summer Pack MY16"},
-                new Version {Nombre = "Advance Manual MY16"}
+                new Version {Nombre = "Advance Manual + Summer Pack"},
+                new Version {Nombre = "Advance Manual"}
             };
 
 
@@ -589,11 +589,11 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "GLI DSG MY16 + App Connect"},
-                new Version {Nombre = "GLI DSG MY16 + App Connect + Navegador"},
+                new Version {Nombre = "GLI DSG + App Connect"},
+                new Version {Nombre = "GLI DSG + App Connect + Navegador"},
                 new Version {Nombre = "GLI DSG MY17 + App Connect + Navegador"},
-                new Version {Nombre = "GLI Manual MY16 + App Connect"},
-                new Version {Nombre = "GLI Manual MY16 + App Connect + Navegador"}
+                new Version {Nombre = "GLI Manual + App Connect"},
+                new Version {Nombre = "GLI Manual + App Connect + Navegador"}
             };
 
 
@@ -611,10 +611,10 @@ namespace Model
             modelos.Clear();
             versions = new List<Version>
             {
-                new Version {Nombre = "Advance Plus Manual MY16"},
-                new Version {Nombre = "Advance Plus Tiptronic MY16"},
-                new Version {Nombre = "Luxury Manual MY16"},
-                new Version {Nombre = "Luxury Tiptronic MY16"}
+                new Version {Nombre = "Advance Plus Manual"},
+                new Version {Nombre = "Advance Plus Tiptronic"},
+                new Version {Nombre = "Luxury Manual"},
+                new Version {Nombre = "Luxury Tiptronic"}
             };
 
 
@@ -1117,94 +1117,7 @@ namespace Model
         }
 
         private static void CargarVehiculos(PolicyCenterContext context)
-        {
-            //var vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 37).FirstOrDefault().IdVersion, // Trendline manual 5P MY17
-            //    IdModelo = 8, // GOL TREND
-            //    Precio = 220836.89M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
-
-            //vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 36).FirstOrDefault().IdVersion, // Trendline manual 3P MY17
-            //    IdModelo = 8, // GOL TREND
-            //    Precio = 208330.83M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
-
-            //vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 35).FirstOrDefault().IdVersion, // Sportline manual 5P MY17
-            //    IdModelo = 8, // GOL TREND
-            //    Precio = 249080.5M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
-
-            //vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 34).FirstOrDefault().IdVersion, // Serie manual 5P MY17
-            //    IdModelo = 8, // GOL TREND
-            //    Precio = 205309.03M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
-
-            //vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 33).FirstOrDefault().IdVersion, // Serie manual 3P MY17
-            //    IdModelo = 8, // GOL TREND
-            //    Precio = 192802.9M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
-
-            //vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 32).FirstOrDefault().IdVersion, //Highline manual 5P MY17
-            //    IdModelo = 8, // GOL TREND
-            //    Precio = 284514.6M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
-
-            //vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 31).FirstOrDefault().IdVersion, //Highline I-Motion MY17
-            //    IdModelo = 8, // GOL TREND                 
-            //    Precio = 302127.25M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
-
-            //vehiculo = new Vehiculo
-            //{
-            //    IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-            //    IdVersion = context.Version.Where(_ => _.IdVersion == 30).FirstOrDefault().IdVersion, //Connect manual 5P MY17
-            //    IdModelo = 8, // GOL TREND
-            //    Precio = 252207.1M,
-            //    Anio = 2017,
-            //    IdRamo = 1
-            //};
-            //context.Bien.Add(vehiculo);
+        {            
 
             /*
              *  
@@ -1221,9 +1134,105 @@ namespace Model
             var vehiculo = new Vehiculo
             {
                 IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
-                IdVersion = context.Version.Where(_ => _.IdVersion == 41).FirstOrDefault().IdVersion, // Trendline Manual MY16
+                IdVersion = context.Version.Where(_ => _.IdVersion == 41).FirstOrDefault().IdVersion, // Trendline Manual
                 IdModelo = 10,  // Golf 1.6
-                Precio = 399000M,
+                Precio = 406534M,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 39).FirstOrDefault().IdVersion, // Comfortline manual
+                IdModelo = 9,  // Golf 1.4 TSI
+                Precio = 470184M,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 38).FirstOrDefault().IdVersion, // Comfortline DSG
+                IdModelo = 9,  // Golf 1.4 TSI
+                Precio = 500769M,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 40).FirstOrDefault().IdVersion, // Highline DSG
+                IdModelo = 9,  // Golf 1.4 TSI
+                Precio = 538934M,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 42).FirstOrDefault().IdVersion, // GTI
+                IdModelo = 11,  // GTI
+                Precio = 45073M * 18,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 43).FirstOrDefault().IdVersion, // GTI + App Connect
+                IdModelo = 11,  // GTI
+                Precio = 45200M * 18,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 44).FirstOrDefault().IdVersion, // GTI + App Connect + Cuero
+                IdModelo = 11,  // GTI
+                Precio = 46862M * 18,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 45).FirstOrDefault().IdVersion, // GTI MY15
+                IdModelo = 11,  // GTI
+                Precio = 46000M * 18,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 10).FirstOrDefault().IdMarca,  // VW
+                IdVersion = context.Version.Where(_ => _.IdVersion == 46).FirstOrDefault().IdVersion, // GTI MY15 + Cuero
+                IdModelo = 11,  // GTI
+                Precio = 47500M * 18,
                 Anio = 2017,
                 IdRamo = 1,
                 Activo = true
@@ -1231,6 +1240,44 @@ namespace Model
             context.Bien.Add(vehiculo);
 
 
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 4).FirstOrDefault().IdMarca, //Citroen
+                IdVersion = context.Version.Where(_ => _.IdVersion == 88).FirstOrDefault().IdVersion, //Live VTi
+                IdModelo = 33, // C3
+                Precio= 294500M,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 4).FirstOrDefault().IdMarca, //Citroen
+                IdVersion = context.Version.Where(_ => _.IdVersion == 89).FirstOrDefault().IdVersion, //Feel VTi
+                IdModelo = 33, // C3
+                Precio = 343500M,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+
+            context.Bien.Add(vehiculo);
+
+            vehiculo = new Vehiculo
+            {
+                IdMarca = context.Marca.Where(_ => _.IdMarca == 4).FirstOrDefault().IdMarca, //Citroen
+                IdVersion = context.Version.Where(_ => _.IdVersion == 91).FirstOrDefault().IdVersion, //Shine VTi
+                IdModelo = 33, // C3
+                Precio = 371500M,
+                Anio = 2017,
+                IdRamo = 1,
+                Activo = true
+            };
+
+            context.Bien.Add(vehiculo);
 
             context.SaveChanges();
         }
