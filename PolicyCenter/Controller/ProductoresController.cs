@@ -8,7 +8,7 @@ namespace Controller
 {
     public class ProductoresController
     {
-        public IList<Model.Productor> ObtenerProductores()
+        public IEnumerable<Model.Productor> ObtenerProductores()
         {
             var context = Model.Context.GetInstance();
             return context.Productor.ToList();

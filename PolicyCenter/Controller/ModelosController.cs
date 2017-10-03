@@ -8,7 +8,7 @@ namespace Controller
 {
     public class ModelosController
     {
-        public IList<Model.Modelo> ObtenerModelos()
+        public IEnumerable<Model.Modelo> ObtenerModelos()
         {
             var context = Model.Context.GetInstance();
             return context.Modelo.Include("Marca").ToList();

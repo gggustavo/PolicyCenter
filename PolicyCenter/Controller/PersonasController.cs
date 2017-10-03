@@ -8,7 +8,7 @@ namespace Controller
 {
     public class PersonasController
     {
-        public IList<Model.Persona> ObtenerPersonas()
+        public IEnumerable<Model.Persona> ObtenerPersonas()
         {
             var context = Model.Context.GetInstance();
             return context.Persona.Include("Direccion").Include("Localidad").ToList();

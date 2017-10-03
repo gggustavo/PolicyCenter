@@ -9,7 +9,7 @@ namespace Controller
 {
     public class AntiguedadRiesgoController
     {
-        public IList<Rule.Entidades.AntiguedadRiesgo> ObtenerAntiguedadRiesgo()
+        public IEnumerable<Rule.Entidades.AntiguedadRiesgo> ObtenerAntiguedadRiesgo()
         {
             var context = Context.GetInstance();
             return context.AntiguedadRiesgo.ToList();

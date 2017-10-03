@@ -8,7 +8,7 @@ namespace Controller
 {
     public class VehiculosController
     {
-        public IList<Model.Vehiculo> ObtenerVehiculos()
+        public IEnumerable<Model.Vehiculo> ObtenerVehiculos()
         {
             var context = Model.Context.GetInstance();
             return context.Vehiculo.Include("Marca").Include("Modelo").Include("Version").Include("Ramo")

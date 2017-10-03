@@ -70,9 +70,9 @@
     <Compile Include="UbicacionRiesgo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
+    <ProjectReference Include="..\Model\Domain.csproj">
       <Project>{55c18a57-47d2-4e6e-94e9-3470fdd7b273}</Project>
-      <Name>Model</Name>
+      <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

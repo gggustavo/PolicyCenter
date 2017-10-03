@@ -8,7 +8,7 @@ namespace Controller
 {
     public class VersionesController
     {
-        public IList<Model.Version> ObtenerVersiones()
+        public IEnumerable<Model.Version> ObtenerVersiones()
         {
             var context = Model.Context.GetInstance();
             return context.Version.Include("Models").ToList();

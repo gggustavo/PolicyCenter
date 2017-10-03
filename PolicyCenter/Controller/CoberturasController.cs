@@ -8,7 +8,7 @@ namespace Controller
 {
     public class CoberturasController
     {
-        public IList<Model.Cobertura> ObtenerCoberturas()
+        public IEnumerable<Model.Cobertura> ObtenerCoberturas()
         {
             var context = Model.Context.GetInstance();
             return context.Cobertura.ToList();

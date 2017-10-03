@@ -236,9 +236,9 @@
       <Project>{6d502247-5f1d-4c8c-948e-15975a740d3f}</Project>
       <Name>Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
+    <ProjectReference Include="..\Model\Domain.csproj">
       <Project>{55c18a57-47d2-4e6e-94e9-3470fdd7b273}</Project>
-      <Name>Model</Name>
+      <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Rule\Rule.csproj">
       <Project>{1b80f351-290f-414d-ae14-8882f6653f75}</Project>

@@ -8,7 +8,7 @@ namespace Controller
 {
     public class LocalidadesController
     {
-        public IList<Model.Localidad> ObtenerLocalidades()
+        public IEnumerable<Model.Localidad> ObtenerLocalidades()
         {
             var context = Model.Context.GetInstance();
             return context.Localidad.ToList();

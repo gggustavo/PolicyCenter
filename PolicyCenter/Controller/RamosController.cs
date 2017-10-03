@@ -8,7 +8,7 @@ namespace Controller
 {
     public class RamosController
     {
-        public IList<Model.Ramo> ObtenerRamos()
+        public IEnumerable<Model.Ramo> ObtenerRamos()
         {
             var context = Model.Context.GetInstance();
             return context.Ramo.ToList();

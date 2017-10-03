@@ -71,9 +71,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
+    <ProjectReference Include="..\Model\Domain.csproj">
       <Project>{55c18a57-47d2-4e6e-94e9-3470fdd7b273}</Project>
-      <Name>Model</Name>
+      <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Rule\Rule.csproj">
       <Project>{1b80f351-290f-414d-ae14-8882f6653f75}</Project>

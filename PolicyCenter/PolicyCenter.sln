@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{6D502247-5F1D-4C8C-948E-15975A740D3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{55C18A57-47D2-4E6E-94E9-3470FDD7B273}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Model\Domain.csproj", "{55C18A57-47D2-4E6E-94E9-3470FDD7B273}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86191F98-6D01-482C-BF36-D177F94384D7}"
 	ProjectSection(SolutionItems) = preProject

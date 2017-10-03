@@ -94,6 +94,8 @@ namespace View
         private void cotizar_Click(object sender, EventArgs e)
         {
             var idCobertura = ((Model.Cobertura)coberturaBindingSource.Current).IdCobertura;
+            if (vehiculoSelect == null) { MessageBox.Show("Validar vehiculo seleccionado"); return; }
+
             var poliza = new Model.Poliza
             {
                 IdPersona = personaSelect.IdPersona,

@@ -8,7 +8,7 @@ namespace Controller
 {
     public class OrganizadoresController
     {
-        public IList<Model.Organizador> ObtenerOrganizadores()
+        public IEnumerable<Model.Organizador> ObtenerOrganizadores()
         {
             var context = Model.Context.GetInstance();
             return context.Organizador.ToList();

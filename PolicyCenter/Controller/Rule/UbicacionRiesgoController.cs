@@ -9,7 +9,7 @@ namespace Controller
 {
     public class UbicacionRiesgoController
     {
-        public IList<Rule.Entidades.UbicacionRiesgo> ObtenerUbicacionRiesgo()
+        public IEnumerable<Rule.Entidades.UbicacionRiesgo> ObtenerUbicacionRiesgo()
         {
             var context = Context.GetInstance();
             return context.UbicacionRiesgo.ToList();
