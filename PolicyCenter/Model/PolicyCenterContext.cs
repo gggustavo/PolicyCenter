@@ -68,6 +68,8 @@ namespace Model
             
             modelBuilder.Entity<Vehiculo>().HasKey(_ => _.IdBien);
             modelBuilder.Entity<Vehiculo>().ToTable("BienVehiculo");
+
+            modelBuilder.Entity<HistoriaBien>().HasKey(_ => _.Id).HasRequired(_ => _.Bien);            
         }
 
         public DbSet<Marca> Marca { get; set; }
@@ -83,6 +85,7 @@ namespace Model
         public DbSet<Riesgo> Riesgo { get; set; }
         public DbSet<Cobertura> Cobertura { get; set; }
         public DbSet<Vehiculo> Vehiculo { get; set; }
+        public DbSet<HistoriaBien> HistoriaBien { get; set; }
 
     }
 }

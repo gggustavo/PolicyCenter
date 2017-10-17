@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HistoriaBien.cs" />
     <Compile Include="Bien.cs" />
     <Compile Include="Cobertura.cs" />
     <Compile Include="Context.cs" />

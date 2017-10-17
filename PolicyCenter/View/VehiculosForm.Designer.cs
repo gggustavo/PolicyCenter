@@ -30,7 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehiculosForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agregar = new System.Windows.Forms.Button();
+            this.borrar = new System.Windows.Forms.Button();
+            this.reinciar = new System.Windows.Forms.Button();
+            this.editar = new System.Windows.Forms.Button();
             this.idMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idModeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,11 +48,6 @@
             this.ramoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agregar = new System.Windows.Forms.Button();
-            this.borrar = new System.Windows.Forms.Button();
-            this.reinciar = new System.Windows.Forms.Button();
-            this.editar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +77,71 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1116, 249);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // vehiculoBindingSource
+            // 
+            this.vehiculoBindingSource.DataSource = typeof(Model.Vehiculo);
+            // 
+            // agregar
+            // 
+            this.agregar.BackColor = System.Drawing.SystemColors.Control;
+            this.agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregar.BackgroundImage")));
+            this.agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.agregar.FlatAppearance.BorderSize = 0;
+            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregar.ForeColor = System.Drawing.Color.Transparent;
+            this.agregar.Location = new System.Drawing.Point(4, 6);
+            this.agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agregar.Name = "agregar";
+            this.agregar.Size = new System.Drawing.Size(90, 60);
+            this.agregar.TabIndex = 38;
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
+            // borrar
+            // 
+            this.borrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("borrar.BackgroundImage")));
+            this.borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.borrar.FlatAppearance.BorderSize = 0;
+            this.borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.borrar.ForeColor = System.Drawing.Color.Transparent;
+            this.borrar.Location = new System.Drawing.Point(195, 6);
+            this.borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.borrar.Name = "borrar";
+            this.borrar.Size = new System.Drawing.Size(90, 60);
+            this.borrar.TabIndex = 41;
+            this.borrar.UseVisualStyleBackColor = true;
+            this.borrar.Click += new System.EventHandler(this.borrar_Click);
+            // 
+            // reinciar
+            // 
+            this.reinciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reinciar.BackgroundImage")));
+            this.reinciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.reinciar.FlatAppearance.BorderSize = 0;
+            this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reinciar.ForeColor = System.Drawing.Color.Transparent;
+            this.reinciar.Location = new System.Drawing.Point(292, 6);
+            this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reinciar.Name = "reinciar";
+            this.reinciar.Size = new System.Drawing.Size(90, 60);
+            this.reinciar.TabIndex = 40;
+            this.reinciar.UseVisualStyleBackColor = true;
+            this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
+            // 
+            // editar
+            // 
+            this.editar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editar.BackgroundImage")));
+            this.editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.editar.FlatAppearance.BorderSize = 0;
+            this.editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editar.ForeColor = System.Drawing.Color.Transparent;
+            this.editar.Location = new System.Drawing.Point(100, 6);
+            this.editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.editar.Name = "editar";
+            this.editar.Size = new System.Drawing.Size(90, 60);
+            this.editar.TabIndex = 42;
+            this.editar.UseVisualStyleBackColor = true;
+            this.editar.Click += new System.EventHandler(this.editar_Click);
             // 
             // idMarcaDataGridViewTextBoxColumn
             // 
@@ -148,73 +214,11 @@
             // precioDataGridViewTextBoxColumn
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.precioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
-            // vehiculoBindingSource
-            // 
-            this.vehiculoBindingSource.DataSource = typeof(Model.Vehiculo);
-            // 
-            // agregar
-            // 
-            this.agregar.BackColor = System.Drawing.SystemColors.Control;
-            this.agregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregar.BackgroundImage")));
-            this.agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.agregar.FlatAppearance.BorderSize = 0;
-            this.agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregar.ForeColor = System.Drawing.Color.Transparent;
-            this.agregar.Location = new System.Drawing.Point(4, 6);
-            this.agregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.agregar.Name = "agregar";
-            this.agregar.Size = new System.Drawing.Size(90, 60);
-            this.agregar.TabIndex = 38;
-            this.agregar.UseVisualStyleBackColor = false;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
-            // 
-            // borrar
-            // 
-            this.borrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("borrar.BackgroundImage")));
-            this.borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.borrar.FlatAppearance.BorderSize = 0;
-            this.borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.borrar.ForeColor = System.Drawing.Color.Transparent;
-            this.borrar.Location = new System.Drawing.Point(195, 6);
-            this.borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.borrar.Name = "borrar";
-            this.borrar.Size = new System.Drawing.Size(90, 60);
-            this.borrar.TabIndex = 41;
-            this.borrar.UseVisualStyleBackColor = true;
-            this.borrar.Click += new System.EventHandler(this.borrar_Click);
-            // 
-            // reinciar
-            // 
-            this.reinciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reinciar.BackgroundImage")));
-            this.reinciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.reinciar.FlatAppearance.BorderSize = 0;
-            this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reinciar.ForeColor = System.Drawing.Color.Transparent;
-            this.reinciar.Location = new System.Drawing.Point(292, 6);
-            this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reinciar.Name = "reinciar";
-            this.reinciar.Size = new System.Drawing.Size(90, 60);
-            this.reinciar.TabIndex = 40;
-            this.reinciar.UseVisualStyleBackColor = true;
-            this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
-            // 
-            // editar
-            // 
-            this.editar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editar.BackgroundImage")));
-            this.editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.editar.FlatAppearance.BorderSize = 0;
-            this.editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editar.ForeColor = System.Drawing.Color.Transparent;
-            this.editar.Location = new System.Drawing.Point(100, 6);
-            this.editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.editar.Name = "editar";
-            this.editar.Size = new System.Drawing.Size(90, 60);
-            this.editar.TabIndex = 42;
-            this.editar.UseVisualStyleBackColor = true;
-            this.editar.Click += new System.EventHandler(this.editar_Click);
             // 
             // VehiculosForm
             // 
@@ -241,6 +245,10 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource vehiculoBindingSource;
+        private System.Windows.Forms.Button agregar;
+        private System.Windows.Forms.Button borrar;
+        private System.Windows.Forms.Button reinciar;
+        private System.Windows.Forms.Button editar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMarcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idModeloDataGridViewTextBoxColumn;
@@ -252,9 +260,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ramoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button agregar;
-        private System.Windows.Forms.Button borrar;
-        private System.Windows.Forms.Button reinciar;
-        private System.Windows.Forms.Button editar;
     }
 }
