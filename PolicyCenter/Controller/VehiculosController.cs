@@ -15,12 +15,25 @@ namespace Controller
                 .Where(_ => _.Activo).ToList();
         }
 
+        public Model.Vehiculo ObtenerVehiculo(int idBien)
+        {
+            var context = Model.Context.GetInstance();
+            return context.Vehiculo.Include("Marca").Include("Modelo").Include("Version").Include("Ramo").FirstOrDefault(_ => _.IdBien == idBien);
+        }
+
         public void Eliminar(int idBien)
         {
             var context = Model.Context.GetInstance();
             var bien = context.Bien.Find(idBien);
             bien.Activo = false;
             context.Entry(bien).State = System.Data.Entity.EntityState.Modified;
+            context.SaveChanges();
+        }
+
+        public void ModificarVehiculo(Model.Vehiculo vehiculo)
+        {
+            var context = Model.Context.GetInstance();
+            context.Entry(vehiculo).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
         }
 

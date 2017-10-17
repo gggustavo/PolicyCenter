@@ -46,7 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.anio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ramo = new System.Windows.Forms.ComboBox();
             this.ramoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
@@ -201,16 +201,16 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Ramo";
             // 
-            // comboBox1
+            // ramo
             // 
-            this.comboBox1.DataSource = this.ramoBindingSource;
-            this.comboBox1.DisplayMember = "Nombre";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(107, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 20);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.ValueMember = "IdRamo";
+            this.ramo.DataSource = this.ramoBindingSource;
+            this.ramo.DisplayMember = "Nombre";
+            this.ramo.FormattingEnabled = true;
+            this.ramo.Location = new System.Drawing.Point(107, 225);
+            this.ramo.Name = "ramo";
+            this.ramo.Size = new System.Drawing.Size(156, 20);
+            this.ramo.TabIndex = 11;
+            this.ramo.ValueMember = "IdRamo";
             // 
             // ramoBindingSource
             // 
@@ -232,7 +232,7 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(452, 349);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ramo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.anio);
@@ -278,7 +278,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox anio;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ramo;
         private System.Windows.Forms.BindingSource ramoBindingSource;
         private System.Windows.Forms.Panel panel1;
     }

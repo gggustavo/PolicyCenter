@@ -46,6 +46,7 @@
             this.agregar = new System.Windows.Forms.Button();
             this.borrar = new System.Windows.Forms.Button();
             this.reinciar = new System.Windows.Forms.Button();
+            this.editar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -177,7 +178,7 @@
             this.borrar.FlatAppearance.BorderSize = 0;
             this.borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.borrar.ForeColor = System.Drawing.Color.Transparent;
-            this.borrar.Location = new System.Drawing.Point(100, 6);
+            this.borrar.Location = new System.Drawing.Point(195, 6);
             this.borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.borrar.Name = "borrar";
             this.borrar.Size = new System.Drawing.Size(90, 60);
@@ -192,7 +193,7 @@
             this.reinciar.FlatAppearance.BorderSize = 0;
             this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reinciar.ForeColor = System.Drawing.Color.Transparent;
-            this.reinciar.Location = new System.Drawing.Point(196, 6);
+            this.reinciar.Location = new System.Drawing.Point(292, 6);
             this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reinciar.Name = "reinciar";
             this.reinciar.Size = new System.Drawing.Size(90, 60);
@@ -200,11 +201,27 @@
             this.reinciar.UseVisualStyleBackColor = true;
             this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
             // 
+            // editar
+            // 
+            this.editar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editar.BackgroundImage")));
+            this.editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.editar.FlatAppearance.BorderSize = 0;
+            this.editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editar.ForeColor = System.Drawing.Color.Transparent;
+            this.editar.Location = new System.Drawing.Point(100, 6);
+            this.editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.editar.Name = "editar";
+            this.editar.Size = new System.Drawing.Size(90, 60);
+            this.editar.TabIndex = 42;
+            this.editar.UseVisualStyleBackColor = true;
+            this.editar.Click += new System.EventHandler(this.editar_Click);
+            // 
             // VehiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 320);
+            this.Controls.Add(this.editar);
             this.Controls.Add(this.borrar);
             this.Controls.Add(this.reinciar);
             this.Controls.Add(this.agregar);
@@ -238,5 +255,6 @@
         private System.Windows.Forms.Button agregar;
         private System.Windows.Forms.Button borrar;
         private System.Windows.Forms.Button reinciar;
+        private System.Windows.Forms.Button editar;
     }
 }

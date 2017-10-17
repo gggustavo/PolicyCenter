@@ -63,5 +63,17 @@ namespace View
             frm.ShowDialog();
             GetData();
         }
+
+        private void editar_Click(object sender, EventArgs e)
+        {
+            if (vehiculoBindingSource.Current == null) MessageBox.Show("Seleccione un vehiculo");
+            dynamic current = vehiculoBindingSource.Current;
+            
+            var idBien = current.IdBien;
+
+            var frm = new VehiculoAddForm(idBien);
+            frm.ShowDialog();
+            GetData();
+        }
     }
 }

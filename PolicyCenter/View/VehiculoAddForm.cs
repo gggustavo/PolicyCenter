@@ -17,12 +17,37 @@ namespace View
         private Controller.VersionesController versionController;
         private Controller.RamosController ramoController;
         private Controller.VehiculosController vehiculoController;
+        private Model.Vehiculo vehiculoEdit = null;
 
-
-        public VehiculoAddForm()
+        public VehiculoAddForm(int idBien)
         {
             InitializeComponent();
 
+            Initialize();
+            vehiculoEdit = vehiculoController.ObtenerVehiculo(idBien);
+            marcas.SelectedValue = vehiculoEdit.Marca.IdMarca;
+            modelos.SelectedValue = vehiculoEdit.Modelo.IdModelo;
+            versiones.SelectedValue = vehiculoEdit.Version.IdVersion;
+            anio.Text = vehiculoEdit.Anio.ToString();
+            ramo.SelectedValue = vehiculoEdit.IdRamo;
+
+            marcas.Enabled = false;
+            modelos.Enabled = false;
+            versiones.Enabled = false;
+            anio.Enabled = false;
+            ramo.Enabled = false;
+
+            precio.Text = vehiculoEdit.Precio.ToString();
+
+        }
+        public VehiculoAddForm()
+        {
+            InitializeComponent();
+            Initialize();
+        }
+
+        private void Initialize()
+        {
             marcasController = new Controller.MarcasController();
             modelosController = new Controller.ModelosController();
             versionController = new Controller.VersionesController();
@@ -44,18 +69,27 @@ namespace View
             if (modeloBindingSource.Current == null) { MessageBox.Show("Seleccione un Modelo"); return; }
             if (versionBindingSource.Current == null) { MessageBox.Show("Seleccione una Version"); return; }
 
-            var bien = new Model.Vehiculo
+            if (vehiculoEdit == null)
             {
-                IdMarca = ((Model.Marca)marcaBindingSource.Current).IdMarca,
-                IdModelo = ((Model.Modelo)modeloBindingSource.Current).IdModelo,
-                IdVersion =  ((Model.Version)versionBindingSource.Current).IdVersion,
-                Precio = Convert.ToDecimal(precio.Text),
-                Anio = Convert.ToInt32(anio.Text),
-                IdRamo = ((Model.Ramo)ramoBindingSource.Current).IdRamo,
-                Activo = true
-            };
+                var bien = new Model.Vehiculo
+                {
+                    IdMarca = ((Model.Marca)marcaBindingSource.Current).IdMarca,
+                    IdModelo = ((Model.Modelo)modeloBindingSource.Current).IdModelo,
+                    IdVersion = ((Model.Version)versionBindingSource.Current).IdVersion,
+                    Precio = Convert.ToDecimal(precio.Text),
+                    Anio = Convert.ToInt32(anio.Text),
+                    IdRamo = ((Model.Ramo)ramoBindingSource.Current).IdRamo,
+                    Activo = true
+                };
 
-            vehiculoController.AgregarVehiculo(bien);
+                vehiculoController.AgregarVehiculo(bien);
+            }
+            else
+            {
+                vehiculoEdit.Precio = Convert.ToDecimal(precio.Text);
+                vehiculoController.ModificarVehiculo(vehiculoEdit);
+            }
+           
             Close();
 
         }
