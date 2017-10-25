@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class CotizadorVehiculoForm
+    partial class CotizadorEmisionVehiculoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CotizadorVehiculoForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CotizadorEmisionVehiculoForm));
             this.marcas = new System.Windows.Forms.ComboBox();
             this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.versionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.agregarPersona = new System.Windows.Forms.Button();
             this.localidadPersona = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.celularPersona = new System.Windows.Forms.TextBox();
@@ -76,7 +77,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.reinciar = new System.Windows.Forms.Button();
             this.cotizar = new System.Windows.Forms.Button();
-            this.agregarPersona = new System.Windows.Forms.Button();
+            this.emision = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.versionBindingSource)).BeginInit();
@@ -208,6 +209,18 @@
             this.groupBox2.Size = new System.Drawing.Size(1049, 122);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
+            // 
+            // agregarPersona
+            // 
+            this.agregarPersona.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregarPersona.BackgroundImage")));
+            this.agregarPersona.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.agregarPersona.Location = new System.Drawing.Point(669, 26);
+            this.agregarPersona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.agregarPersona.Name = "agregarPersona";
+            this.agregarPersona.Size = new System.Drawing.Size(20, 20);
+            this.agregarPersona.TabIndex = 13;
+            this.agregarPersona.UseVisualStyleBackColor = true;
+            this.agregarPersona.Click += new System.EventHandler(this.agregarPersona_Click);
             // 
             // localidadPersona
             // 
@@ -583,52 +596,60 @@
             // 
             // reinciar
             // 
-            this.reinciar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reinciar.BackgroundImage")));
             this.reinciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.reinciar.FlatAppearance.BorderSize = 0;
             this.reinciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reinciar.ForeColor = System.Drawing.Color.Transparent;
-            this.reinciar.Location = new System.Drawing.Point(108, 11);
+            this.reinciar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reinciar.ForeColor = System.Drawing.Color.Black;
+            this.reinciar.Location = new System.Drawing.Point(204, 11);
             this.reinciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reinciar.Name = "reinciar";
             this.reinciar.Size = new System.Drawing.Size(90, 60);
             this.reinciar.TabIndex = 35;
+            this.reinciar.Text = "Reiniciar";
             this.reinciar.UseVisualStyleBackColor = true;
             this.reinciar.Click += new System.EventHandler(this.reinciar_Click);
             // 
             // cotizar
             // 
-            this.cotizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cotizar.BackgroundImage")));
             this.cotizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cotizar.Enabled = false;
             this.cotizar.FlatAppearance.BorderSize = 0;
             this.cotizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cotizar.ForeColor = System.Drawing.Color.Transparent;
+            this.cotizar.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cotizar.ForeColor = System.Drawing.Color.Black;
             this.cotizar.Location = new System.Drawing.Point(12, 11);
             this.cotizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cotizar.Name = "cotizar";
             this.cotizar.Size = new System.Drawing.Size(90, 60);
             this.cotizar.TabIndex = 34;
+            this.cotizar.Text = "Cotizar";
             this.cotizar.UseVisualStyleBackColor = true;
             this.cotizar.Click += new System.EventHandler(this.cotizar_Click);
             // 
-            // agregarPersona
+            // emision
             // 
-            this.agregarPersona.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("agregarPersona.BackgroundImage")));
-            this.agregarPersona.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.agregarPersona.Location = new System.Drawing.Point(669, 26);
-            this.agregarPersona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.agregarPersona.Name = "agregarPersona";
-            this.agregarPersona.Size = new System.Drawing.Size(20, 20);
-            this.agregarPersona.TabIndex = 13;
-            this.agregarPersona.UseVisualStyleBackColor = true;
-            this.agregarPersona.Click += new System.EventHandler(this.agregarPersona_Click);
+            this.emision.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.emision.Enabled = false;
+            this.emision.FlatAppearance.BorderSize = 0;
+            this.emision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.emision.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emision.ForeColor = System.Drawing.Color.Black;
+            this.emision.Location = new System.Drawing.Point(108, 11);
+            this.emision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emision.Name = "emision";
+            this.emision.Size = new System.Drawing.Size(90, 60);
+            this.emision.TabIndex = 37;
+            this.emision.Text = "Emision";
+            this.emision.UseVisualStyleBackColor = true;
+            this.emision.Click += new System.EventHandler(this.emision_Click);
             // 
-            // CotizadorVehiculoForm
+            // CotizadorEmisionVehiculoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 555);
+            this.Controls.Add(this.emision);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.reinciar);
             this.Controls.Add(this.cotizar);
@@ -643,9 +664,9 @@
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "CotizadorVehiculoForm";
+            this.Name = "CotizadorEmisionVehiculoForm";
             this.ShowInTaskbar = false;
-            this.Text = "Cotizador Vehiculo";
+            this.Text = "Cotizador/Emision Vehiculo";
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.versionBindingSource)).EndInit();
@@ -712,5 +733,6 @@
         private System.Windows.Forms.Button reinciar;
         private System.Windows.Forms.Button cotizar;
         private System.Windows.Forms.Button agregarPersona;
+        private System.Windows.Forms.Button emision;
     }
 }

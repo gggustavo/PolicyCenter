@@ -24,7 +24,7 @@ namespace TestPolicyCenter
                     Anio = 2017
                 },
                 IdCobertura = 2,
-                Numero = 1,
+                IdentificadorPoliza = "1",
                 VigenciaDesde = System.DateTime.Now,
                 VigenciaHasta = System.DateTime.Now.AddDays(180),
                 Estado = "Vigente"
@@ -55,7 +55,7 @@ namespace TestPolicyCenter
                     Anio = 2017
                 },
                 IdCobertura = 2,
-                Numero = 1,
+                IdentificadorPoliza = "1",
                 VigenciaDesde = System.DateTime.Now,
                 VigenciaHasta = System.DateTime.Now.AddDays(180),
                 Estado = "Vigente"

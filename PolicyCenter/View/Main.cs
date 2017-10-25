@@ -97,7 +97,7 @@ namespace View
 
         private void autosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ShowForm(new CotizadorVehiculoForm());
+            ShowForm(new CotizadorEmisionVehiculoForm());
         }
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)

@@ -64,11 +64,11 @@
     <Compile Include="CoberturasForm.Designer.cs">
       <DependentUpon>CoberturasForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CotizadorVehiculoForm.cs">
+    <Compile Include="CotizadorEmisionVehiculoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CotizadorVehiculoForm.Designer.cs">
-      <DependentUpon>CotizadorVehiculoForm.cs</DependentUpon>
+    <Compile Include="CotizadorEmisionVehiculoForm.Designer.cs">
+      <DependentUpon>CotizadorEmisionVehiculoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalidadesForm.cs">
       <SubType>Form</SubType>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="CoberturasForm.resx">
       <DependentUpon>CoberturasForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CotizadorVehiculoForm.resx">
-      <DependentUpon>CotizadorVehiculoForm.cs</DependentUpon>
+    <EmbeddedResource Include="CotizadorEmisionVehiculoForm.resx">
+      <DependentUpon>CotizadorEmisionVehiculoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalidadesForm.resx">
       <DependentUpon>LocalidadesForm.cs</DependentUpon>

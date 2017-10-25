@@ -18,7 +18,7 @@ namespace Model
             CargarCoberturas(context);
             CargarRamos(context);
             CargarVehiculos(context);            
-            CargarPoliza(context);            
+           
             base.Seed(context);
         }
 
@@ -1280,31 +1280,6 @@ namespace Model
             context.Bien.Add(vehiculo);
 
             context.SaveChanges();
-        }
-
-        
-
-        private static void CargarPoliza(PolicyCenterContext context)
-        {
-            var persona = context.Persona.FirstOrDefault();
-
-            var poliza = new Poliza
-            {                
-                IdPersona = persona.IdPersona,
-                IdProductor = 1,
-                IdBien = 1,
-                IdCobertura = 1,
-                Numero = 1,
-                Premio = 8692,
-                Prima = 6460, // calcular en base a formula
-                VigenciaDesde = System.DateTime.Now,
-                VigenciaHasta = System.DateTime.Now.AddDays(180),
-                Estado = "Vigente"
-            };
-
-            context.Poliza.Add(poliza);
-            context.SaveChanges();
- 
         }
 
     }

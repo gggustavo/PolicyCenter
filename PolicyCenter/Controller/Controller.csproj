@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmisionController.cs" />
     <Compile Include="Rule\AntiguedadRiesgoController.cs" />
     <Compile Include="Rule\UbicacionRiesgoController.cs" />
     <Compile Include="VersionesController.cs" />

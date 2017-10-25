@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class CotizadorVehiculoForm : Form
+    public partial class CotizadorEmisionVehiculoForm : Form
     {
         private Controller.MarcasController marcasController = new Controller.MarcasController();
         private Controller.ModelosController modelosController = new Controller.ModelosController();
@@ -19,12 +19,14 @@ namespace View
         private Controller.VehiculosController vehiculosController = new Controller.VehiculosController();
         private Controller.PersonasController personasController = new Controller.PersonasController();
         private Controller.CoberturasController coberturasController = new Controller.CoberturasController();
+        private Controller.EmisionController emisionController = new Controller.EmisionController();
 
         private Model.Vehiculo vehiculoSelect;
         private Model.Persona personaSelect;
+        private Model.Poliza poliza;
 
 
-        public CotizadorVehiculoForm()
+        public CotizadorEmisionVehiculoForm()
         {
             InitializeComponent();
 
@@ -96,7 +98,7 @@ namespace View
             var idCobertura = ((Model.Cobertura)coberturaBindingSource.Current).IdCobertura;
             if (vehiculoSelect == null) { MessageBox.Show("Validar vehiculo seleccionado"); return; }
 
-            var poliza = new Model.Poliza
+            poliza = new Model.Poliza
             {
                 IdPersona = personaSelect.IdPersona,
                 Persona = personaSelect,
@@ -119,6 +121,8 @@ namespace View
             premio.Text = string.Format("{0:###,000.## $}", poliza.Premio);
 
             cuotas.Text = string.Format("{0:###,000.## $}", (poliza.Premio / 6));
+
+            emision.Enabled = true;
         }
 
         private void reinciar_Click(object sender, EventArgs e)
@@ -148,6 +152,7 @@ namespace View
             precio.Text = string.Empty;
 
             auto.Text = string.Empty;
+            emision.Enabled = false;
         }
 
         private void agregarPersona_Click(object sender, EventArgs e)
@@ -155,6 +160,15 @@ namespace View
             var frm = new PersonasAddForm();
             frm.ShowDialog();
         }
+
+        private void emision_Click(object sender, EventArgs e)
+        {
+            emisionController.Emision(poliza);
+            MessageBox.Show("Poliza generada correctamente. " + poliza.Guid );
+            Reset();
+        }
+
+
 
        
     }
