@@ -47,6 +47,8 @@
             this.reglasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ubicacionRiesgoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.antiguedadRiesgoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carteraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polizasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +57,7 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administracionToolStripMenuItem,
+            this.carteraToolStripMenuItem,
             this.cotizadoresToolStripMenuItem,
             this.salirToolStripMenuItem,
             this.reglasToolStripMenuItem});
@@ -158,7 +161,7 @@
             // autosToolStripMenuItem1
             // 
             this.autosToolStripMenuItem1.Name = "autosToolStripMenuItem1";
-            this.autosToolStripMenuItem1.Size = new System.Drawing.Size(102, 22);
+            this.autosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.autosToolStripMenuItem1.Text = "Autos";
             this.autosToolStripMenuItem1.Click += new System.EventHandler(this.autosToolStripMenuItem1_Click);
             // 
@@ -202,6 +205,21 @@
             this.antiguedadRiesgoToolStripMenuItem.Text = "Antiguedad Riesgo";
             this.antiguedadRiesgoToolStripMenuItem.Click += new System.EventHandler(this.antiguedadRiesgoToolStripMenuItem_Click);
             // 
+            // carteraToolStripMenuItem
+            // 
+            this.carteraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.polizasToolStripMenuItem});
+            this.carteraToolStripMenuItem.Name = "carteraToolStripMenuItem";
+            this.carteraToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.carteraToolStripMenuItem.Text = "Cartera";
+            // 
+            // polizasToolStripMenuItem
+            // 
+            this.polizasToolStripMenuItem.Name = "polizasToolStripMenuItem";
+            this.polizasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.polizasToolStripMenuItem.Text = "Polizas";
+            this.polizasToolStripMenuItem.Click += new System.EventHandler(this.polizasToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -243,6 +261,8 @@
         private System.Windows.Forms.ToolStripMenuItem reglasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ubicacionRiesgoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem antiguedadRiesgoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carteraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polizasToolStripMenuItem;
 
 
 

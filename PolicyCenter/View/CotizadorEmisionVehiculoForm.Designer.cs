@@ -568,18 +568,18 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(21, 96);
+            this.panel1.Location = new System.Drawing.Point(12, 96);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 65);
+            this.panel1.Size = new System.Drawing.Size(140, 75);
             this.panel1.TabIndex = 31;
             // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(21, 206);
+            this.panel2.Location = new System.Drawing.Point(32, 223);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 122);
+            this.panel2.Size = new System.Drawing.Size(81, 75);
             this.panel2.TabIndex = 32;
             // 
             // groupBox5

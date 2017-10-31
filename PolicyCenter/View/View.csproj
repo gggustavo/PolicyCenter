@@ -64,6 +64,12 @@
     <Compile Include="CoberturasForm.Designer.cs">
       <DependentUpon>CoberturasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarteraPolizasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarteraPolizasForm.Designer.cs">
+      <DependentUpon>CarteraPolizasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CotizadorEmisionVehiculoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     <EmbeddedResource Include="CoberturasForm.resx">
       <DependentUpon>CoberturasForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarteraPolizasForm.resx">
+      <DependentUpon>CarteraPolizasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CotizadorEmisionVehiculoForm.resx">
       <DependentUpon>CotizadorEmisionVehiculoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +221,7 @@
     <None Include="Properties\DataSources\Model.Modelo.datasource" />
     <None Include="Properties\DataSources\Model.Organizador.datasource" />
     <None Include="Properties\DataSources\Model.Persona.datasource" />
+    <None Include="Properties\DataSources\Model.Poliza.datasource" />
     <None Include="Properties\DataSources\Model.Productor.datasource" />
     <None Include="Properties\DataSources\Model.Ramo.datasource" />
     <None Include="Properties\DataSources\Model.Vehiculo.datasource" />

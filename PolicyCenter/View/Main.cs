@@ -114,6 +114,11 @@ namespace View
         {
             ShowForm(new Rule.AntiguedadRiesgoForm());
         }
+
+        private void polizasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new CarteraPolizasForm());
+        }
  
     }
 }

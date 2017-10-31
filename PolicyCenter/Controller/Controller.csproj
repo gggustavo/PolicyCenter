@@ -55,6 +55,7 @@
     <Compile Include="EmisionController.cs" />
     <Compile Include="Rule\AntiguedadRiesgoController.cs" />
     <Compile Include="Rule\UbicacionRiesgoController.cs" />
+    <Compile Include="CarteraPolizaController.cs" />
     <Compile Include="VersionesController.cs" />
     <Compile Include="VehiculosController.cs" />
     <Compile Include="RamosController.cs" />

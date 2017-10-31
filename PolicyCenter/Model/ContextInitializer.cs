@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -17,7 +18,8 @@ namespace Model
             CargarRiesgos(context);
             CargarCoberturas(context);
             CargarRamos(context);
-            CargarVehiculos(context);            
+            CargarVehiculos(context);
+            CargarPolizas(context);
            
             base.Seed(context);
         }
@@ -1282,6 +1284,25 @@ namespace Model
             context.SaveChanges();
         }
 
+        private static void CargarPolizas(PolicyCenterContext context)
+        {
+            var poliza = new Model.Poliza
+            {
+                IdPersona = 1,                
+                IdProductor = 1,
+                IdBien = 1,                
+                IdCobertura = 1,
+                VigenciaDesde = System.DateTime.Now,
+                VigenciaHasta = System.DateTime.Now.AddDays(180),
+                Estado = "Vigente",
+                Premio = 2000,
+                Prima = 1500,
+                Guid = Guid.NewGuid().ToString()
+            };            
+            poliza.IdentificadorPoliza = poliza.IdProductor.ToString("0000000") + poliza.IdBien.ToString("0000000") + poliza.IdPersona.ToString("0000000");
+
+            context.Poliza.Add(poliza);
+            context.SaveChanges();
+        }
     }
 }
-
